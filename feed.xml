@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Daily Gaming &amp; Tech Brief</title>
+    <link>https://mrcaddlr.github.io/daily-brief-rss/</link>
+    <description>Daily gaming, tech, Steam, Linux, free games, Xodus, and PC DRM news.</description>
+    <language>en</language>
+    <item>
+      <title>Daily Brief feed is ready</title>
+      <link>https://mrcaddlr.github.io/daily-brief-rss/</link>
+      <guid isPermaLink="false">daily-brief-rss-initial</guid>
+      <description>The RSS feed is set up and ready for the daily brief automation.</description>
+    </item>
+  </channel>
+</rss>
