@@ -5,11 +5,63 @@
     <link>https://mrcaddlr.github.io/daily-brief-rss/</link>
     <description>Daily gaming, tech, Steam, Linux, free games, Xodus, and PC DRM news.</description>
     <language>en</language>
+    <lastBuildDate>Thu, 17 Sep 2026 17:57:00 +0800</lastBuildDate>
+
     <item>
-      <title>Daily Brief feed is ready</title>
+      <title>Daily Gaming &amp; Tech Brief — September 17, 2026</title>
       <link>https://mrcaddlr.github.io/daily-brief-rss/</link>
-      <guid isPermaLink="false">daily-brief-rss-initial</guid>
-      <description>The RSS feed is set up and ready for the daily brief automation.</description>
+      <guid isPermaLink="false">daily-brief-2026-09-17</guid>
+      <pubDate>Thu, 17 Sep 2026 17:57:00 +0800</pubDate>
+      <description><![CDATA[
+      <h2>1. GAME NEWS</h2>
+      <h3>Sonic Racing: CrossWorlds starts its Year Two content push</h3>
+      <p>Sega has outlined more content for Sonic Racing: CrossWorlds as it moves into its second year. The update includes free guest characters and additional post-launch content, keeping the game's live-service-style roadmap active after its initial launch period.</p>
+      <hr/>
+      <h3>Shinji Mikami receives Hall of Fame recognition</h3>
+      <p>Resident Evil creator Shinji Mikami is being recognized with a Hall of Fame induction, highlighting his long-running influence on survival horror and action-game design. His career spans major work at Capcom and later Tango Gameworks, including Resident Evil 4 and The Evil Within.</p>
+      <hr/>
+      <h3>Dragon's Dogma II: Dark Arisen gets a new trailer</h3>
+      <p>Capcom has shown new material for Dragon's Dogma II: Dark Arisen, continuing promotion around the expanded version of the RPG. The project is part of the current wave of major Japanese publisher announcements and updates surrounding the series.</p>
+
+      <h2>2. TECH NEWS</h2>
+      <h3>Valve develops new SteamOS compatibility layers for Steam Frame</h3>
+      <p>Valve is working on FEX and Lepton components for Steam Frame, with the technology aimed at running software across the device's Linux-based environment. The work includes Android APK support and reflects Valve's broader effort to make SteamOS hardware compatible with software outside the traditional x86 PC model.</p>
+      <hr/>
+      <h3>Linux gaming compatibility work continues to expand</h3>
+      <p>Current Linux gaming development continues to focus on compatibility layers, game-specific fixes and improving support for software distributed through Steam. Recent tracking also shows ongoing changes to Linux depots and compatibility-related packaging as developers adapt games for the platform.</p>
+
+      <h2>3. STEAM SALE / EVENT</h2>
+      <h3>Steam Programming Fest — September 17–20</h3>
+      <p>Steam's Programming Fest is active from September 17 through September 20, focusing on games built around programming and related mechanics. It is part of Steam's September event schedule, alongside the Party-Based RPG Fest running through September 21.</p>
+
+      <h2>4. XODUS</h2>
+      <p><strong>Progress:</strong> active development toward game execution</p>
+      <p>Current Xodus development remains focused on getting Windows games running through its compatibility stack. Recent project activity continues around implementation, packaging and dependency work, but there is no defensible public percentage for overall game-execution progress, so no numeric progress bar is included.</p>
+
+      <h2>5. FREE GAMES</h2>
+      <h3>Epic Games Store</h3>
+      <p><strong>Astral Ascent</strong> and <strong>Luftrausers</strong> are the current Epic Games Store free-to-keep games around September 17. The next giveaway window is scheduled to bring <strong>Mindcop</strong> and <strong>Shogun Showdown</strong> from September 17 through September 24.</p>
+
+      <h2>6. LINUX APPS</h2>
+      <h3>FEX</h3>
+      <p>An open-source x86/x86-64 userspace emulator that is increasingly relevant to Linux gaming and ARM-based hardware, including Valve's Steam Frame work.</p>
+      <hr/>
+      <h3>Lepton</h3>
+      <p>Valve's compatibility work for Steam Frame includes Lepton as part of the software stack intended to broaden what applications can run on the device.</p>
+      <hr/>
+      <h3>Prism Launcher</h3>
+      <p>An open-source Minecraft launcher for Linux with strong support for separate instances, mod loaders and per-instance configuration.</p>
+
+      <h2>7. PIRACY SCENE</h2>
+      <h3>Denuvo vs. voices38 lawsuit filed</h3>
+      <p>Denuvo's parent company has filed a lawsuit against the piracy group voices38, seeking damages and injunctive relief. Reporting says the complaint names 26 games and follows the group's recent activity involving Denuvo-protected releases.</p>
+      <hr/>
+      <h3>Denuvo removals continue</h3>
+      <p>Recent tracking reports Denuvo being removed from several games, including Code Vein II, Mega Man Star Force Legacy Collection, Bravely Default Flying Fairy HD Remaster and Dragon's Dogma 2. These removals are changes to the games' DRM configuration rather than new cracks.</p>
+      <hr/>
+      <h3>DRM circumvention activity remains unusually active</h3>
+      <p>The current PC DRM scene continues to include conventional crack releases, updates and research into alternative approaches to protected games. Confirmed developments should be distinguished from community rumors, especially where a release or bypass has not been independently verified.</p>
+      ]]></description>
     </item>
   </channel>
 </rss>
