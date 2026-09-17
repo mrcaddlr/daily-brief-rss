@@ -1,0 +1,41 @@
+name: Update daily brief RSS
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '5 9 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  update-feed:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Refresh feed timestamp
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from datetime import datetime, timezone
+          path = Path('feed.xml')
+          text = path.read_text()
+          marker = '<!-- last-checked: '
+          start = text.find(marker)
+          if start != -1:
+              end = text.find('-->', start)
+              text = text[:start] + marker + datetime.now(timezone.utc).isoformat() + ' -->' + text[end+3:]
+          else:
+              text = text.replace('<rss version="2.0">', '<rss version="2.0">\n  <!-- last-checked: ' + datetime.now(timezone.utc).isoformat() + ' -->', 1)
+          path.write_text(text)
+          PY
+
+      - name: Commit feed update
+        run: |
+          git config user.name 'daily-brief-rss bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add feed.xml
+          git diff --cached --quiet || git commit -m 'refresh RSS feed'
+          git push
