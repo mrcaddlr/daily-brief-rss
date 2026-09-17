@@ -6,61 +6,112 @@
     <description>Daily gaming, tech, Steam, Linux, free games, Xodus, and PC DRM news.</description>
     <language>en</language>
     <lastBuildDate>Thu, 17 Sep 2026 17:57:00 +0800</lastBuildDate>
-
     <item>
       <title>Daily Gaming &amp; Tech Brief — September 17, 2026</title>
       <link>https://mrcaddlr.github.io/daily-brief-rss/</link>
       <guid isPermaLink="false">daily-brief-2026-09-17</guid>
       <pubDate>Thu, 17 Sep 2026 17:57:00 +0800</pubDate>
       <description><![CDATA[
-      <h2>1. GAME NEWS</h2>
-      <h3>Sonic Racing: CrossWorlds starts its Year Two content push</h3>
-      <p>Sega has outlined more content for Sonic Racing: CrossWorlds as it moves into its second year. The update includes free guest characters and additional post-launch content, keeping the game's live-service-style roadmap active after its initial launch period.</p>
-      <hr/>
-      <h3>Shinji Mikami receives Hall of Fame recognition</h3>
-      <p>Resident Evil creator Shinji Mikami is being recognized with a Hall of Fame induction, highlighting his long-running influence on survival horror and action-game design. His career spans major work at Capcom and later Tango Gameworks, including Resident Evil 4 and The Evil Within.</p>
-      <hr/>
-      <h3>Dragon's Dogma II: Dark Arisen gets a new trailer</h3>
-      <p>Capcom has shown new material for Dragon's Dogma II: Dark Arisen, continuing promotion around the expanded version of the RPG. The project is part of the current wave of major Japanese publisher announcements and updates surrounding the series.</p>
+<h2>1. GAME &amp; TECH NEWS</h2>
 
-      <h2>2. TECH NEWS</h2>
-      <h3>Valve develops new SteamOS compatibility layers for Steam Frame</h3>
-      <p>Valve is working on FEX and Lepton components for Steam Frame, with the technology aimed at running software across the device's Linux-based environment. The work includes Android APK support and reflects Valve's broader effort to make SteamOS hardware compatible with software outside the traditional x86 PC model.</p>
-      <hr/>
-      <h3>Linux gaming compatibility work continues to expand</h3>
-      <p>Current Linux gaming development continues to focus on compatibility layers, game-specific fixes and improving support for software distributed through Steam. Recent tracking also shows ongoing changes to Linux depots and compatibility-related packaging as developers adapt games for the platform.</p>
+<h3>GAME NEWS</h3>
 
-      <h2>3. STEAM SALE / EVENT</h2>
-      <h3>Steam Programming Fest — September 17–20</h3>
-      <p>Steam's Programming Fest is active from September 17 through September 20, focusing on games built around programming and related mechanics. It is part of Steam's September event schedule, alongside the Party-Based RPG Fest running through September 21.</p>
+<h4>1) Endless Legend 2 reaches version 1.0 as September's PC release slate gets crowded</h4>
+<p>Amplitude Studios' 4X strategy sequel leaves Early Access on September 17 with its 1.0 launch, adding more faction and endgame content alongside its console debut. The same day also brings Trails in the Sky 2nd Chapter, The Guild - Europa 1410 in Early Access, Concrete Burial and other PC releases, making September 17 one of the month's densest single-day launch windows. For PC players, that means more competition for attention and money at exactly the point when the autumn release schedule is accelerating.</p>
 
-      <h2>4. XODUS</h2>
-      <p><strong>Progress:</strong> active development toward game execution</p>
-      <p>Current Xodus development remains focused on getting Windows games running through its compatibility stack. Recent project activity continues around implementation, packaging and dependency work, but there is no defensible public percentage for overall game-execution progress, so no numeric progress bar is included.</p>
+<h4>2) Ubisoft is testing a less intrusive Steam launch path for Prince of Persia: The Lost Crown</h4>
+<p>Ubisoft is changing how some of its Steam games handle Ubisoft Connect, starting with Prince of Persia: The Lost Crown. Instead of opening the full desktop launcher, the game can use a smaller background service while retaining account-linked features such as cross-progression and rewards, and Ubisoft says the approach could spread to more titles. The change matters because the mandatory second-launcher flow has been one of Ubisoft's longest-running PC usability complaints.</p>
 
-      <h2>5. FREE GAMES</h2>
-      <h3>Epic Games Store</h3>
-      <p><strong>Astral Ascent</strong> and <strong>Luftrausers</strong> are the current Epic Games Store free-to-keep games around September 17. The next giveaway window is scheduled to bring <strong>Mindcop</strong> and <strong>Shogun Showdown</strong> from September 17 through September 24.</p>
+<h4>3) Nighthawks is fighting a Steam Adults Only classification before its September 22 launch</h4>
+<p>Richard Cobbett and Wadjet Eye Games say Valve's Adults Only classification has removed the upcoming vampire RPG Nighthawks from normal Steam search and has contributed to regional delistings in markets including Germany. The developers are contesting the rating and argue that its sexual material is mild and comedic rather than explicit. The dispute matters because Steam visibility and age-gating can materially affect an indie game's launch, especially when discovery depends heavily on storefront search.</p>
 
-      <h2>6. LINUX APPS</h2>
-      <h3>FEX</h3>
-      <p>An open-source x86/x86-64 userspace emulator that is increasingly relevant to Linux gaming and ARM-based hardware, including Valve's Steam Frame work.</p>
-      <hr/>
-      <h3>Lepton</h3>
-      <p>Valve's compatibility work for Steam Frame includes Lepton as part of the software stack intended to broaden what applications can run on the device.</p>
-      <hr/>
-      <h3>Prism Launcher</h3>
-      <p>An open-source Minecraft launcher for Linux with strong support for separate instances, mod loaders and per-instance configuration.</p>
+<h4>4) Saudi-backed consolidation is back in focus around EA and Savvy Games</h4>
+<p>Reuters reported that Saudi Arabia's Public Investment Fund is considering a possible merger between Electronic Arts and Savvy Games after acquiring EA for about $55 billion. A combination would put major EA properties such as EA Sports FC, Battlefield and The Sims alongside Savvy's mobile portfolio, including Monopoly Go! and Pokémon GO, while potentially drawing regulatory scrutiny. The report is still a consideration rather than a completed transaction, but it shows how aggressively major investors are reshaping the games industry after years of layoffs and slower growth.</p>
 
-      <h2>7. PIRACY SCENE</h2>
-      <h3>Denuvo vs. voices38 lawsuit filed</h3>
-      <p>Denuvo's parent company has filed a lawsuit against the piracy group voices38, seeking damages and injunctive relief. Reporting says the complaint names 26 games and follows the group's recent activity involving Denuvo-protected releases.</p>
-      <hr/>
-      <h3>Denuvo removals continue</h3>
-      <p>Recent tracking reports Denuvo being removed from several games, including Code Vein II, Mega Man Star Force Legacy Collection, Bravely Default Flying Fairy HD Remaster and Dragon's Dogma 2. These removals are changes to the games' DRM configuration rather than new cracks.</p>
-      <hr/>
-      <h3>DRM circumvention activity remains unusually active</h3>
-      <p>The current PC DRM scene continues to include conventional crack releases, updates and research into alternative approaches to protected games. Confirmed developments should be distinguished from community rumors, especially where a release or bypass has not been independently verified.</p>
+<h4>5) September's game calendar is shifting from Early Access milestones to major post-launch updates</h4>
+<p>Valheim has already reached 1.0, RuneScape: Dragonwilds moved to 1.0 on September 15, Endless Legend 2 reaches 1.0 on September 17, and Dune: Awakening is scheduled to add a single-player mode on September 22. The concentration of large updates alongside new releases gives players a schedule closer to a traditional autumn rush than the quieter summer cadence. For smaller studios, the key consequence is a much tougher fight for storefront visibility, review coverage and first-week playtime.</p>
+
+<h3>TECH NEWS</h3>
+
+<h4>1) Huawei says demand for its AI chips is already exceeding supply in China</h4>
+<p>Huawei chairman Eric Xu said demand for the company's Ascend AI hardware is outstripping production, while the company accelerates next-generation Ascend 960 chips planned for 2027. Huawei is also developing a Peerium architecture intended to link as many as one million processors, an approach designed to compensate for the performance and ecosystem gap with Nvidia by scaling whole systems. The report is a sign that U.S. chip restrictions are pushing China toward a more self-contained AI hardware stack rather than simply reducing demand.</p>
+
+<h4>2) Apple is reportedly exploring an AI server return built around its own silicon</h4>
+<p>Reuters reported on September 16 that Apple is considering enterprise AI servers using its own M8 Ultra chips and potentially Nvidia's NVLink Fusion technology. The project is described as an inference-focused system with a tentative 2029 target and could still be cancelled or redesigned. If it reaches market, it would represent a major expansion of Apple's custom-silicon strategy into enterprise infrastructure and a notable sign of closer practical cooperation with Nvidia.</p>
+
+<h4>3) U.S. and Chinese security experts propose nuclear-style safeguards for military AI</h4>
+<p>A Brookings-Tsinghua dialogue has produced proposals for strict red lines around nuclear systems, human control over critical cyber operations and direct communication channels for AI-related incidents. The recommendations are not government policy, but they show how concerns about autonomous military systems are moving into serious national-security planning. The debate could eventually influence how powerful AI models and infrastructure are regulated far beyond consumer applications.</p>
+
+<h4>4) Snap is pushing Specs AR glasses toward enterprise customers</h4>
+<p>Snap has announced enterprise partnerships with Salesforce, Nvidia and AWS for factory, retail and field-service deployments of its Specs augmented-reality glasses. The glasses are priced at $2,195, or $2,395 with a cellular charging case, and are expected to ship in the U.S., U.K. and France in fall 2026. The move is notable because it treats AR as a productivity tool that has to justify a business purchase rather than as a consumer novelty competing mainly with Meta and Vision Pro.</p>
+
+<h4>5) GNOME 51 launches with a strong performance and graphics focus</h4>
+<p>GNOME 51 released on September 17 with reworked frame scheduling, faster screen capture, remembered monitor-brightness settings and a cleaner modern graphics stack that drops legacy Nvidia driver interfaces. The changes are especially relevant to Linux desktops used for gaming and media because frame pacing and capture performance are everyday concerns rather than benchmark-only features. Distribution packaging will determine when most users receive it, so the effect will roll out over time rather than immediately.</p>
+
+<hr/>
+
+<h2>2. STEAM SALE / EVENT</h2>
+
+<h3>Steam Party-Based RPG Fest — September 14–21</h3>
+<p>Steam's current actual platform-wide event runs from September 14 at 10:00 a.m. Pacific through September 21 at 10:00 a.m. Pacific and focuses on RPGs built around multiple controllable party members with separate roles, equipment and abilities. Reported highlights include <strong>Baldur's Gate 3 at 30% off</strong>, <strong>Clair Obscur: Expedition 33 at 24% off</strong> in its first meaningful sale, and discounts reaching up to 90% on older party-based RPGs and series bundles. <strong>Expeditions: Samurai</strong> is 34% off in Early Access, while <strong>Expeditions: Conquistador</strong>, <strong>Viking</strong> and <strong>Rome</strong> are each 75% off. The event also includes demos and upcoming games, so it works as both a sale and a genre-discovery showcase.</p>
+
+<hr/>
+
+<h2>3. XODUS</h2>
+
+<h3>Current status</h3>
+<p>Xodus remains an active open-source project aimed at bringing Xbox PC and Game Pass titles to Linux and macOS. The public repository documents working login, package downloads and license acquisition, while its architecture is split across a Rust core, Xbox runtime compatibility, authentication libraries, MSIXVC parsing and a patched Wine integration.</p>
+
+<p><strong>1)</strong> Core account and content-delivery pieces are documented as working, so Xodus has progressed beyond a simple launcher or downloader prototype.</p>
+<p><strong>2)</strong> The project continues work around <strong>xgameruntime.dll</strong>, which is important because many Xbox PC games depend on the Xbox runtime rather than behaving like ordinary Windows titles.</p>
+<p><strong>3)</strong> Public project documentation still highlights <strong>on-demand .exe decryption</strong> and <strong>MSIXVC2 support</strong> as active technical areas for handling newer packaged games.</p>
+<p><strong>4)</strong> The project says it can download and run some backward-compatible Xbox titles, while broader coverage still depends on additional Wine, DXVK or VKD3D-Proton patches.</p>
+<p><strong>Progress: active development toward game execution</strong></p>
+
+<hr/>
+
+<h2>4. FREE GAMES</h2>
+
+<h3>Epic Games Store</h3>
+<p><strong>Astral Ascent</strong> and <strong>Luftrausers</strong> are the current September 10–17 free-to-keep titles, with the claim window ending September 17 at 11:00 a.m. Eastern. The next weekly giveaway is scheduled for <strong>Mindcop</strong> and <strong>Shogun Showdown</strong> from September 17 through September 24. Once claimed, the Epic titles stay in the library after the promotional period ends.</p>
+
+<h3>Amazon Prime / Luna — September 17 drop</h3>
+<p><strong>DOOM Eternal</strong> via Microsoft Store code, <strong>Rims Racing</strong> via Epic Games Store and <strong>Wall World 2</strong> via the Amazon Games App are the September 17 Prime claimable titles. They are permanent claims through their respective redemption stores rather than free weekends. The next wave on September 24 is scheduled to add <strong>Hue</strong>, <strong>The Da Vinci Cryptex</strong> and <strong>High on Life</strong>.</p>
+
+<h3>Steam / GOG check</h3>
+<p>No separate, clearly confirmed Steam 100%-free-to-keep giveaway or notable temporary GOG giveaway was verified for this run.</p>
+
+<hr/>
+
+<h2>5. LINUX APPS</h2>
+
+<h3>1) GNOME 51</h3>
+<p>The newest GNOME desktop release focuses on smoother frame delivery, faster recording and a modernized graphics path. It is a particularly interesting upgrade for users who care about desktop animation and capture performance without wanting a giant stack of extensions.</p>
+
+<h3>2) Sunshine</h3>
+<p>The open-source self-hosted game-streaming host shipped a September 15 release carrying a high-severity security update for Linux hosts. Sunshine is useful beyond ordinary desktop streaming because it can turn a Linux PC into a low-latency game host for phones, handhelds and other clients.</p>
+
+<h3>3) Nuclear</h3>
+<p>Nuclear is a free, ad-free open-source music player with a plugin architecture, queue management, themes and Linux packages including AppImage, deb, rpm and Flatpak. It is a good fit for people who want a music app that feels more like a customizable open-source project than a basic folder player.</p>
+
+<hr/>
+
+<h2>6. PIRACY SCENE</h2>
+
+<h3>Confirmed: Denuvo sues anonymous figure known as voices38</h3>
+<p>Denuvo filed a federal lawsuit on September 14 in the U.S. District Court for the Northern District of California, alleging that the anonymous defendant known as <strong>voices38</strong> bypassed Denuvo Anti-Tamper in at least 26 PC games. Reports identify titles including Hogwarts Legacy, Black Myth: Wukong, Resident Evil Requiem and DOOM: The Dark Ages, while the complaint seeks damages and an injunction against further circumvention. The allegations remain unproven in court and the defendant's identity is not publicly confirmed.</p>
+
+<h3>Confirmed: major Denuvo removals continue</h3>
+<p>Recent reporting tracks Denuvo being removed from <strong>CODE VEIN 2</strong>, <strong>Dragon's Dogma 2</strong>, <strong>Mega Man Star Force Legacy Collection</strong> and <strong>Bravely Default Flying Fairy HD Remaster</strong>. Dragon's Dogma 2 is especially notable because the DRM removal arrived with a major optimization update, tying the DRM change to a legitimate performance and maintenance patch as well.</p>
+
+<h3>Confirmed: the dispute is becoming a broader anti-circumvention test case</h3>
+<p>The case is being watched as an important test of how a DRM vendor can use DMCA anti-circumvention claims directly against an alleged bypass author when the vendor is not the underlying game's copyright owner. Whatever the outcome, a successful claim could encourage stronger legal action around anonymous circumvention projects, while a failed claim could shape how future DRM enforcement is structured.</p>
+
+<h3>Unconfirmed: rapid day-one bypass chatter continues</h3>
+<p>The PC piracy community continues to circulate claims about fast releases and alternative Denuvo bypass methods, but public reporting does not consistently establish authorship, provenance or whether every claimed release is a complete crack rather than a workaround or repackaged older approach. Those claims should therefore be treated as unconfirmed until independently corroborated.</p>
+
+<h3>Platform trend</h3>
+<p>The current DRM fight is increasingly running on two tracks at once: publishers are removing Denuvo later in a game's life or alongside optimization patches, while DRM vendors are escalating legal and online-verification measures to preserve launch-window protection. That makes the present story as much about maintenance, policy and ownership friction as about individual circumvention releases.</p>
       ]]></description>
     </item>
   </channel>
