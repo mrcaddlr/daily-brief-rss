@@ -5,7 +5,7 @@
     <link>https://mrcaddlr.github.io/daily-brief-rss/</link>
     <description>Daily gaming, tech, Steam, Linux, free games, Xodus, and PC DRM news.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 17 Sep 2026 18:05:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 16:00:00 +0800</lastBuildDate>
     <item>
       <title>Daily Gaming &amp; Tech Brief — September 17, 2026</title>
       <link>https://mrcaddlr.github.io/daily-brief-rss/</link>
@@ -112,6 +112,87 @@
 
 <h3>Broader trend</h3>
 <p>The most consequential confirmed developments currently sit on both sides of the DRM lifecycle: protection remains a major launch strategy for publishers, while removals are increasingly appearing in later updates, and legal action is becoming more visible when vendors believe their protection has been deliberately circumvented. The voices38 lawsuit adds a new legal dimension to that ongoing conflict without resolving the underlying technical or commercial debate.</p>
+      ]]></description>
+    </item>
+    <item>
+      <title>Daily Gaming &amp; Tech Brief — September 18, 2026</title>
+      <link>https://mrcaddlr.github.io/daily-brief-rss/</link>
+      <guid isPermaLink="false">daily-brief-2026-09-18</guid>
+      <pubDate>Fri, 18 Sep 2026 16:00:00 +0800</pubDate>
+      <description><![CDATA[
+<h2>1. GAME &amp; TECH NEWS</h2>
+<h3>GAME NEWS</h3>
+<h4>1) September 18's PC release wave is packed</h4>
+<p>Today's Steam release calendar includes a broad mix of new games, including <em>Anymaker</em>, <em>Wand &amp; Order: Tidy up the magic shop!</em>, <em>Sunken Realms</em>, <em>Nightwater</em>, <em>Paver: Tidy Up Together</em> and <em>Crown Siege</em>. The late-September calendar then moves into larger releases such as <em>SILENT HILL: Townfall</em> on September 23 and <em>CONTROL Resonant</em> and <em>EA SPORTS FC 27</em> on September 24. The consequence is a storefront where several different genres are competing for attention almost every day.</p>
+<h4>2) Active Matter joins the extraction-shooter wave</h4>
+<p><em>Active Matter</em> is launching as a multiverse-themed extraction shooter, adding another science-fiction take on a genre that has become increasingly crowded. At the same time, established games such as <em>Arena Breakout: Infinite</em> are using large seasonal additions to retain players. That makes launch timing and differentiation increasingly important for new extraction games.</p>
+<h4>3) NASCAR 26 arrives</h4>
+<p><em>NASCAR 26</em> is part of the September 18 release wave, bringing another annual licensed racing game to PC and consoles. The PC edition is listed at $59.99, with additional seasonal content available separately. Its launch adds another established sports property to an already unusually busy September.</p>
+<h4>4) SILENT HILL: Townfall is one week from launch</h4>
+<p><em>SILENT HILL: Townfall</em> is scheduled for September 23 and is listed on Steam at $49.99. The first-person horror game is one of the month's more prominent releases and lands between today's smaller launches and next week's major releases. Its placement makes the final week of September particularly crowded for horror and action-game players.</p>
+<h4>5) EA SPORTS FC 27 arrives September 24</h4>
+<p>EA lists <em>EA SPORTS FC 27</em> for September 24 at $69.99. The yearly football release is arriving in the same general window as <em>CONTROL Resonant</em>, creating another high-profile PC release collision. The launch begins the next annual cycle of EA's licensed football series with updated squads and seasonal content.</p>
+<h4>6) Minecraft Dungeons II and other major games are approaching</h4>
+<p><em>Minecraft Dungeons II</em> is currently scheduled for September 29, followed by <em>ACE COMBAT 8</em> on October 1 and <em>Phantom Blade Zero</em> on October 28. The calendar shows that September's crowded schedule is not a short spike: October is immediately carrying the momentum forward. For players, that means wishlist management and release prioritization are becoming increasingly useful.</p>
+
+<h3>TECH NEWS</h3>
+<h4>1) Nvidia GeForce support is appearing in SteamOS development</h4>
+<p>Valve is bringing Nvidia GeForce support into SteamOS development, although the implementation is not finished. Historically, SteamOS hardware has been dominated by AMD graphics, so broader Nvidia support could eventually make SteamOS more relevant to desktop gaming PCs. This is development work rather than a finished general-purpose Nvidia SteamOS release.</p>
+<h4>2) GNOME 51 releases with graphics improvements</h4>
+<p>GNOME 51 released this week with improved frame scheduling, smoother desktop responsiveness and faster screen capture. Mutter also adds newer Wayland support and removes legacy Nvidia EGLStreams support. The release is particularly relevant to Linux gaming and media users because frame pacing and capture performance affect everyday use.</p>
+<h4>3) Apple is reportedly considering enterprise AI servers</h4>
+<p>Reuters reports that Apple is exploring enterprise AI servers based on future Apple silicon, with Nvidia interconnect technology reportedly being considered. The project is described as long-term and could still change or be cancelled. If it ships, it would extend Apple's custom-silicon strategy into data-center inference hardware.</p>
+<h4>4) Huawei says Ascend demand exceeds supply</h4>
+<p>Huawei chairman Eric Xu says demand for the company's Ascend AI hardware in China is exceeding production capacity. Huawei is also working on larger systems that connect many processors, reflecting China's continued push for domestic AI infrastructure while access to some advanced foreign accelerators remains restricted. The development highlights how AI competition is increasingly about complete computing systems, not only individual chips.</p>
+<h4>5) SteamOS is expanding its compatibility stack</h4>
+<p>Valve's SteamOS work for Steam Frame uses more than Proton, including FEX for translating x86 software to ARM and Android compatibility technology for Android applications. SteamOS is therefore becoming a broader compatibility platform capable of handling several architectures and software ecosystems. That could matter for future SteamOS hardware as much as it does for the current device.</p>
+<h4>6) Linux graphics infrastructure continues moving toward modern APIs</h4>
+<p>GNOME 51's Mutter work, Wayland development and Valve's SteamOS changes all point toward a Linux graphics stack increasingly centered on modern APIs and compositors. For gamers, this affects frame scheduling, display handling, capture and driver support rather than simply desktop appearance. The practical impact will arrive gradually as distributions and hardware stacks adopt the new components.</p>
+
+<hr/>
+<h2>2. STEAM SALE / EVENT</h2>
+<h3>Steam Party-Based RPG Fest — September 14–21</h3>
+<p>Steam's current official event is Party-Based RPG Fest, running September 14 through September 21. It focuses on RPGs where players control multiple party members with different roles, equipment and abilities. The event combines discounts with demos and upcoming games, so it functions as both a sale and a discovery event.</p>
+<p>Participating games range from established party RPGs to smaller projects and new releases. The event overlaps with the current RPG launch calendar, including <em>Trails in the Sky 2nd Chapter</em>. Tokyo Game Show is not counted here because it is not itself a Steam promotion.</p>
+
+<hr/>
+<h2>3. XODUS</h2>
+<h3>Current status</h3>
+<p>Xodus remains an active open-source project focused on bringing Xbox PC and Game Pass software toward Linux and macOS execution. Its public work covers authentication, Xbox runtime compatibility, MSIXVC package handling and Wine integration.</p>
+<p><strong>1) Account and acquisition infrastructure:</strong> login, Xbox authorization, package downloading and license acquisition are documented as working pieces, meaning the project has moved beyond being only a launcher concept.</p>
+<p><strong>2) MSIXVC2:</strong> newer Microsoft package handling remains an active engineering area because modern Xbox PC games depend heavily on Microsoft's packaged distribution format.</p>
+<p><strong>3) Executable handling:</strong> on-demand executable decryption remains listed as unfinished work, separating successful content acquisition from broad game execution.</p>
+<p><strong>4) Runtime compatibility:</strong> Xbox Services and Wine-side compatibility remain major execution hurdles, with the project maintaining separate components for the runtime, authentication and patched Wine.</p>
+<p><strong>Progress: active development toward game execution</strong></p>
+
+<hr/>
+<h2>4. FREE GAMES</h2>
+<h3>Epic Games Store</h3>
+<p><strong>Mindcop</strong> and <strong>Shogun Showdown</strong> are the current Epic Games Store free-to-keep games for September 17–24. They remain in the Epic library after being claimed during the promotion. Mindcop is a mystery investigation game, while Shogun Showdown combines turn-based combat with roguelike and deck-building systems.</p>
+<h3>Amazon Prime / Luna</h3>
+<p>The September 17 claim wave includes <strong>DOOM Eternal</strong> via Microsoft Store code, <strong>Rims Racing</strong> via Epic Games Store and <strong>Wall World 2</strong> via the Amazon Games App. The September 24 wave is scheduled to add <strong>Hue</strong>, <strong>The Da Vinci Cryptex</strong> and <strong>High on Life</strong>.</p>
+<h3>Steam / GOG</h3>
+<p>Steam currently has <strong>Dying Light: The Beast - Discharge Weapon Pack</strong> and <strong>Space Menace</strong> listed as free-to-keep promotions, running through September 24 and September 23 respectively. These are actual permanent claims rather than free weekends. No additional notable temporary GOG giveaway was confirmed for this run.</p>
+
+<hr/>
+<h2>5. LINUX APPS</h2>
+<h3>1) GNOME 51</h3>
+<p>GNOME 51 is the newest major GNOME desktop release, with frame-scheduling improvements, faster capture and newer graphics infrastructure. It is especially interesting for gaming-oriented Linux desktops because several changes target responsiveness and graphics behavior.</p>
+<h3>2) Sunshine</h3>
+<p>Sunshine is an open-source self-hosted game-streaming host that turns a PC into a low-latency streaming server for compatible clients. It is useful for sending games from a Linux desktop to handhelds, phones and other devices without relying on a proprietary cloud-gaming service.</p>
+<h3>3) Nuclear</h3>
+<p>Nuclear is an open-source music player with a plugin architecture, queue management and customizable themes. It supports Linux packaging and focuses on music discovery and streaming, making it a more unusual desktop media option than a basic local-file player.</p>
+
+<hr/>
+<h2>6. PIRACY SCENE</h2>
+<h3>Denuvo vs. voices38 remains the major legal development</h3>
+<p>Denuvo filed a federal lawsuit on September 14 against the anonymous figure known as <strong>voices38</strong>, alleging circumvention of Denuvo Anti-Tamper in at least 26 PC games. The complaint reportedly includes major titles such as <em>Hogwarts Legacy</em>, <em>DOOM: The Dark Ages</em> and <em>Resident Evil Requiem</em>, and seeks damages and an injunction. These are allegations in an ongoing case, and the defendant's identity has not been established publicly.</p>
+<h3>Official DRM removals continue</h3>
+<p>Publishers continue removing Denuvo from games later in their lifecycles, sometimes alongside maintenance and optimization updates. Those are legitimate publisher changes and are separate from unauthorized circumvention. The pattern matters because it increasingly makes DRM a lifecycle decision rather than simply a launch-time decision.</p>
+<h3>Rapid-release and bypass claims remain difficult to verify</h3>
+<p>Communities continue discussing fast releases, conventional cracks and alternative DRM bypass approaches, but individual claims about authorship, completeness or technical methods are not consistently independently verified. Confirmed legal filings and official DRM changes are therefore kept separate from community claims.</p>
+<h3>The scene is broader than one lawsuit</h3>
+<p>The current PC DRM landscape includes continued Denuvo deployment, official removals, alleged circumvention, legal enforcement and Linux compatibility issues. The voices38 lawsuit is a major current development within that wider scene, rather than the only relevant story.</p>
       ]]></description>
     </item>
   </channel>
