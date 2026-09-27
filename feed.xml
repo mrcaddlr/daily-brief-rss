@@ -190,25 +190,13 @@
 
 <h2>6. PIRACY SCENE</h2>
 
-<h3>1. Denuvo's lawsuit against voices38 remains an active legal development</h3>
-<p>Denuvo filed a lawsuit in the U.S. District Court for the Northern District of California on September 14 against the anonymous figure known as <strong>voices38</strong>. The complaint alleges circumvention of Denuvo Anti-Tamper in at least 26 PC games and seeks monetary damages plus an order preventing further circumvention. These are allegations in an early-stage case and have not been established as facts by a court.</p>
-<p>Source: <a href="https://www.tomshardware.com/video-games/denuvo-sues-anonymous-game-cracker-voices38-over-alleged-drm-circumvention-seeks-damages-after-anti-tamper-protections-bypassed-in-26-games">Tom's Hardware</a>.</p>
+<h3>Control Resonant piracy community reaction becomes a current story</h3>
+<p>On September 26, reporting said unauthorized copies of <strong>Control Resonant</strong> were circulating after the game's September 24 launch, but the notable development was a coordinated discussion within piracy communities encouraging people who can afford it to buy the game and support Remedy. The reaction is being reported as a community response to Remedy's financial situation rather than a new DRM breakthrough or crack.</p>
+<p>Source: <a href="https://unboxholics.com/en/news/gaming/135963-control-resonant-pirates-rally-to-support-remedy">Unboxholics</a>.</p>
 
-<h3>2. Control Resonant Steam build leak reported before release</h3>
-<p>Reporting on September 24 said a working Steam build of <strong>Control Resonant</strong> circulated online roughly a day before its official release, allowing unauthorized early access. The report concerns distribution of a leaked build rather than a confirmed new Denuvo bypass, and it does not establish that the game's DRM itself had been defeated. Remedy subsequently released the official game and a day-one patch addressing gameplay balance and other issues.</p>
-<p>Source: <a href="https://www.notebookcheck.net/Control-Resonant-Steam-build-leaks-before-release-date-giving-pirates-early-access.1406843.0.html">Notebookcheck</a>.</p>
-
-<h3>3. Recent Denuvo cracks remain a documented part of the wider DRM cycle</h3>
-<p>Recent reporting documented a burst of Denuvo-protected games being bypassed, including <strong>Mortal Kombat 1</strong> and <strong>Persona 3 Reload</strong>, alongside other titles. The reporting distinguishes these conventional protection bypasses from claims of broader hypervisor-level techniques. Individual release claims can change quickly, so unverified community assertions are not treated as confirmed releases here.</p>
-<p>Source: <a href="https://www.notebookcheck.net/Mortal-Kombat-is-1-of-6-Denuvo-games-cracked-in-24-hours-as-piracy-jeopardizes-DRM.1392414.0.html">Notebookcheck</a>.</p>
-
-<h3>4. DRM removals continue alongside new protection deployments</h3>
-<p>Publishers continue removing Denuvo from some older PC games while other new releases continue launching with Anti-Tamper or other DRM. This creates a continuing cycle in which protection is deployed around launch, later removed for selected titles, and separately targeted by circumvention researchers. The pattern remains relevant to preservation, modding and Linux compatibility because DRM changes can alter how games behave after launch.</p>
-
-<h3>5. Legal and platform enforcement remains part of the scene</h3>
-<p>Current PC piracy developments are not limited to cracks: lawsuits, takedowns, platform enforcement and publisher DRM policy all affect availability and distribution. The voices38 case is the most prominent current Denuvo legal action, while the Control Resonant leak demonstrates that unauthorized distribution can occur even without a newly confirmed DRM breakthrough.</p>
-
-<p>Confirmed developments are separated above from rumors and unverified release claims. No piracy links or circumvention instructions are included.</p>
+<h3>No major new confirmed DRM breakthrough reported in the current window</h3>
+<p>As of September 27, the available current reporting does not establish a new Denuvo crack, newly disclosed DRM bypass, fresh DRM removal, or new court action from the past day. Older developments such as the September 14 voices38 lawsuit, the September 24 Control Resonant pre-release leak, and earlier Denuvo cracks are excluded here because there is no newly reported development attached to them in the current window.</p>
+<p>This section is intentionally limited to current, concrete developments rather than filling space with recurring DRM background.</p>
 ]]></description>
     </item>
   </channel>
