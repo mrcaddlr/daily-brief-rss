@@ -70,5 +70,146 @@
 <h3>Anti-piracy enforcement is broader than DRM alone</h3><p>Legal filings, platform takedowns, account actions, anti-cheat updates and protection changes all affect the current PC piracy ecosystem. The wider scene is therefore being shaped by publisher policy and enforcement as much as by individual releases.</p>
 ]]></description>
     </item>
+    <item>
+      <title>Daily Gaming &amp; Tech Brief — September 27, 2026</title>
+      <link>https://mrcaddlr.github.io/daily-brief-rss/</link>
+      <guid isPermaLink="false">daily-brief-2026-09-27</guid>
+      <pubDate>Sun, 27 Sep 2026 23:28:00 +0800</pubDate>
+      <description><![CDATA[
+<h2>1. GAME &amp; TECH NEWS</h2>
+
+<h3>GAME NEWS</h3>
+
+<h4>1. Minecraft announces The Sift, its first new dimension in more than 14 years</h4>
+<p>Mojang revealed The Sift during Minecraft LIVE on September 26, describing it as the fourth Minecraft dimension after the Overworld, Nether and End. The dimension first appears in <strong>Minecraft Dungeons II</strong>, which launches September 29, 2026, and is planned for Java and Bedrock Edition in 2027. Microsoft/Xbox also highlighted a reported 425 million copies sold and roughly 300,000 new players arriving each day, putting the announcement in the context of a still-expanding long-running platform.</p>
+<p>Source: <a href="https://www.minecraft.net/en-us/article/mclive_sept2026_recap">Mojang / Minecraft</a>.</p>
+
+<h4>2. Control Resonant launches with an immediate balance patch</h4>
+<p>Remedy's <strong>Control Resonant</strong> launched on September 24 and received a day-one update addressing player feedback, including changes that make several encounters easier. The release has also generated substantial review attention, with current reporting putting its Steam reception around the high-80s and Metacritic in the low-to-mid 80s. The rapid post-launch tuning shows Remedy is already adjusting the game while the September release window remains crowded with major titles.</p>
+<p>Source: <a href="https://kotaku.com/control-resonant-gets-day-one-patch-making-enemies-easier-to-kill-2000736960">Kotaku</a>.</p>
+
+<h4>3. Marvel's Wolverine adds broader controls for its Senses system</h4>
+<p>Insomniac released update 1.001.006 for <strong>Marvel's Wolverine</strong>, expanding player control over Senses indicators including Scent Trails and Audio Clues. A September 25 hotfix had already reduced their visual intensity and addressed crashes affecting a small percentage of players, and the newer update goes further by adding toggles. The change is a direct gameplay-interface response while the PS5 release continues receiving post-launch fixes.</p>
+<p>Source: <a href="https://support.insomniac.games/hc/en-us/articles/55566410009107-Update-v-01-001-005">Insomniac Games</a>.</p>
+
+<h4>4. GTA VI secrecy remains a live issue after a cast disclosure</h4>
+<p>Reports this week say Rockstar reminded people involved with <strong>Grand Theft Auto VI</strong> to honor confidentiality agreements after actor Stephen Root publicly discussed his involvement. The reported reminder says collaborators should wait until November 19, 2026, the game's announced release date, before publicly identifying their participation. Rockstar has not publicly confirmed the reported internal message, so the NDA reminder remains reported rather than an officially documented cast announcement.</p>
+<p>Source: <a href="https://www.gamesradar.com/games/grand-theft-auto/rockstar-reportedly-reminded-gta-6s-voice-cast-theyre-still-under-nda-after-actor-stephen-root-let-slip-hes-in-the-game/">GamesRadar+</a>.</p>
+
+<h4>5. Delta Force outlines its second-anniversary update plans</h4>
+<p>Team Jade used a September 26 anniversary broadcast to detail new <strong>Delta Force</strong> content, including maps, modes, story material, Unreal Engine 5 features and esports-related plans. The update comes as the multiplayer shooter approaches its second year and continues receiving large-scale seasonal additions. The announcement gives players a concrete preview of the next phase rather than a single cosmetic drop.</p>
+<p>Source: <a href="https://playday.one/2026/09/26/delta-force-2nd-anni-stream-details-new-maps-modes-stories-ue5-features/">PlayDay</a>.</p>
+
+<h4>6. Japan's PC gaming market continues its rapid expansion</h4>
+<p>Recent industry reporting says PC gaming in Japan has grown by more than 200% over four years, reflecting a major shift in a market historically dominated by consoles and mobile games. The change matters for publishers because Japanese PC audiences increasingly overlap with global PC storefronts and simultaneous releases. The trend is part of the broader expansion of PC gaming beyond its traditional Western strongholds.</p>
+<p>Source: <a href="https://kotaku.com/pc-gaming-grows-over-200-percent-in-four-years-in-japan-as-global-hits-break-through-2000736037">Kotaku</a>.</p>
+
+<h3>TECH NEWS</h3>
+
+<h4>1. Amazon, Apple, AMD, Google, Tesla, Microsoft, Nvidia and Qualcomm reportedly examine Intel 14A</h4>
+<p>Reporting on September 25 said several major technology companies are evaluating Intel's 14A semiconductor process. The list reportedly includes Amazon, Apple, AMD, Google, Tesla, Microsoft, Nvidia and Qualcomm, making the development significant for Intel's foundry ambitions and for companies seeking additional advanced-node manufacturing capacity. Evaluations do not mean contracts have been signed, so the current development is best understood as interest and testing rather than confirmed production commitments.</p>
+<p>Source: <a href="https://www.techspot.com/news/109655-amazon-apple-amd-google-tesla-microsoft-nvidia.html">TechSpot</a>.</p>
+
+<h4>2. Googlebook launches as an AI-first premium laptop category</h4>
+<p>Google officially launched <strong>Googlebook</strong> on September 21 as a new AI-focused premium laptop category built around Gemini features. The move places Google's software and AI stack more directly into the laptop market and increases competition with Windows and ChromeOS hardware ecosystems. Details of the launch emphasize AI integration as a primary product feature rather than an optional software layer.</p>
+<p>Source: <a href="https://indianexpress.com/article/technology/tech-news-technology/googlebook-launched-specs-gemini-ai-features-pricing-10888614/">The Indian Express</a>.</p>
+
+<h4>3. Meta's Muse gives users persistent cloud Linux environments</h4>
+<p>Meta has introduced <strong>Muse</strong>, an AI agent that can provision a persistent Linux virtual machine in Meta's cloud for users. The architecture is notable because the AI system is paired with a persistent computing environment rather than being limited to a conventional chat interface. It also illustrates how cloud-hosted Linux environments are increasingly being treated as part of consumer AI products.</p>
+<p>Source: <a href="https://kenove.no/digest/2026-09-26">September 26 tech digest</a>.</p>
+
+<h4>4. Microsoft is reportedly moving away from the "AI PC" label</h4>
+<p>Reporting on September 25 said Microsoft has stopped emphasizing the phrase <strong>AI PC</strong> in its hardware messaging after the category failed to become a clear consumer-facing identity. The underlying Copilot and local-accelerator features remain, but the branding is changing. The shift reflects the difficulty of turning a technical hardware category into a distinct product category for ordinary PC buyers.</p>
+<p>Source: <a href="https://www.techspot.com/news-202609.html">TechSpot September 2026 archive</a>.</p>
+
+<h4>5. SteamOS 3.8.28 expands graphics and hardware support</h4>
+<p>Valve released <strong>SteamOS 3.8.28</strong> to stable users on September 24 with a new major Mesa graphics driver, improved VRAM management, additional Steam Controller support and preliminary Steam Frame Wireless Adapter support. Valve also fixed a 20–30 second startup delay affecting some games on non-Valve devices with no audio sources. The release continues SteamOS's expansion beyond the original Steam Deck hardware target.</p>
+<p>Source: <a href="https://www.steamdeck.com/en/news">Valve / Steam Deck</a>.</p>
+
+<h4>6. Proton Experimental receives fresh compatibility fixes</h4>
+<p>A September 25 Proton Experimental update restored support for CEG-protected games after a regression and fixed Japanese text rendering in <strong>Killer7</strong>. It also addressed compatibility problems affecting <strong>Crysis</strong> and <strong>Crysis Wars</strong> on some newer AMD processors and added early 32-bit OpenXR support. The changes are another incremental expansion of the Windows-game compatibility layer used by Linux gaming.</p>
+<p>Source: <a href="https://www.digitalcitizen.life/proton-experimental-update-fixes-killer7-japanese-text-and-crysis-issues-on-newer-amd-cpus/">Digital Citizen</a>.</p>
+
+<hr/>
+
+<h2>2. STEAM SALE / EVENT</h2>
+
+<h3>Current Steam events — September 25–October 2</h3>
+<p>Steam currently has several genuine promotional events running. <strong>Game Devs of Color Expo</strong> runs September 25–October 2, while <strong>新的故事：中国单机游戏展</strong> runs September 25–October 2. <strong>TGD Quest</strong> runs September 25–28, and <strong>On Duty Sale</strong> runs September 25–October 1.</p>
+<p>Additional active promotions include the <strong>Castlevania Franchise Sale</strong> and <strong>NieR Franchise Sale</strong>, both running September 24–October 8, the <strong>Last of Us Day Sale</strong> running September 24–October 1, the <strong>ATLUS Developer Sale</strong> running September 24–October 1, and the <strong>Ubisoft 40th Anniversary Sale</strong> running September 17–October 1. Steam is also hosting the <strong>2026 Multiplayer Games Fest</strong> through October 2, with the <strong>Stronger Together Demo Showcase</strong> running through September 28.</p>
+<p>These are Steam storefront promotions and events rather than generic third-party discounts. Discounts and participating games vary by event and publisher, so the Steam event pages are the authoritative source for the live offer at the time of purchase.</p>
+<p>Source: <a href="https://steamdb.info/sales/history/all/">SteamDB event tracker</a>; <a href="https://store.steampowered.com/specials/">Steam Specials</a>.</p>
+
+<hr/>
+
+<h2>3. XODUS</h2>
+
+<p><strong>Progress: active development toward game execution</strong></p>
+
+<ul>
+<li><strong>Core authentication and licensing are documented working.</strong> The Xodus repository says it can log in, download packages and obtain game licenses, establishing the account and delivery side of the project.</li>
+<li><strong>MSIXVC handling remains central.</strong> Xodus is working around Xbox PC's MSIXVC packaging and has active work covering package download, parsing and executable decryption.</li>
+<li><strong>The Xbox runtime is still a major execution dependency.</strong> The project maintains an open-source <code>xgameruntime.dll</code> implementation intended for Wine and continues documenting the Windows Xbox runtime interfaces games depend on.</li>
+<li><strong>The project is still actively changing.</strong> The core Xodus repository was updated September 25, while its Wine fork was updated September 15. This indicates continuing engineering work across the compatibility stack.</li>
+<li><strong>Broad game execution is not yet established.</strong> The project's own documentation says additional Wine-side Xbox Services work is still needed and that compatibility will depend on game format and the GDK/runtime requirements of individual titles. No official numeric completion percentage has been published.</li>
+</ul>
+<p>Sources: <a href="https://github.com/xodus-gaming/xodus">Xodus repository</a>; <a href="https://github.com/xodus-gaming">Xodus GitHub organization</a>.</p>
+
+<hr/>
+
+<h2>4. FREE GAMES</h2>
+
+<h3>Epic Games Store — September 24–October 1</h3>
+<p><strong>Astrea: Six-Sided Oracles</strong> and <strong>Mechabellum</strong> are the current Epic Games Store PC free-to-keep games for September 24 through October 1, 2026. These are permanent claims when redeemed during the promotion window, rather than free-to-play titles or free-weekend trials.</p>
+
+<h3>Amazon Prime / Luna — September 24 drop</h3>
+<p><strong>Hue</strong> is available through the Epic Games Store, <strong>The Da Vinci Cryptex</strong> through a Legacy Games code, and <strong>High on Life</strong> through the Epic Games Store. Amazon's September schedule places these claims on September 24, following earlier September drops including DOOM Eternal, Rims Racing and Wall World 2.</p>
+
+<h3>Amazon Prime / Luna — earlier September claims still within their stated windows</h3>
+<p><strong>DOOM + DOOM II</strong> arrived September 10 through a GOG code, while <strong>DOOM Eternal</strong>, <strong>Rims Racing</strong> and <strong>Wall World 2</strong> arrived September 17 through Microsoft, Epic Games Store and Amazon Games App redemption respectively. The exact claim status depends on Amazon's active offer window, so these should be treated separately from the September 24 drop rather than assumed to remain available indefinitely.</p>
+
+<p>Source: <a href="https://www.amazongamestudios.com/en-in/news/articles/luna-september-2026">Amazon Games / Luna September 2026</a>; <a href="https://www.gamegrin.com/news/epic-games-store-pc-weekly-free-games-24092026/">GameGrin</a>.</p>
+
+<hr/>
+
+<h2>5. LINUX APPS</h2>
+
+<h3>1. Music Assistant Desktop 0.6.9</h3>
+<p>Music Assistant's desktop client reached version 0.6.9 on September 17 and ships Linux AppImage, Flatpak and RPM builds. It provides a native desktop front end for Music Assistant installations, making it useful for people who want a dedicated multi-source music control surface rather than a browser tab.</p>
+<p>Source: <a href="https://github.com/music-assistant/desktop-app/releases">Music Assistant releases</a>.</p>
+
+<h3>2. IPFS Desktop 0.50.1</h3>
+<p>IPFS Desktop 0.50.1 was released September 15 with updates including Kubo 0.43.1 and Electron 44.3.0, plus fixes for desktop integration and autostart behavior. It gives Linux users a graphical way to work with the InterPlanetary File System rather than managing IPFS entirely from a terminal.</p>
+<p>Source: <a href="https://github.com/ipfs/ipfs-desktop/releases">IPFS Desktop releases</a>.</p>
+
+<h3>3. Zen Browser</h3>
+<p>Zen Browser shipped a Linux build update on September 23, with x86_64 and ARM64 AppImage packages among its release assets. Its Firefox-based, customization-heavy interface makes it a more distinctive browser choice than another generic Chromium wrapper, while still providing native Linux packages.</p>
+<p>Source: <a href="https://github.com/zen-browser/desktop/releases">Zen Browser releases</a>.</p>
+
+<hr/>
+
+<h2>6. PIRACY SCENE</h2>
+
+<h3>1. Denuvo's lawsuit against voices38 remains an active legal development</h3>
+<p>Denuvo filed a lawsuit in the U.S. District Court for the Northern District of California on September 14 against the anonymous figure known as <strong>voices38</strong>. The complaint alleges circumvention of Denuvo Anti-Tamper in at least 26 PC games and seeks monetary damages plus an order preventing further circumvention. These are allegations in an early-stage case and have not been established as facts by a court.</p>
+<p>Source: <a href="https://www.tomshardware.com/video-games/denuvo-sues-anonymous-game-cracker-voices38-over-alleged-drm-circumvention-seeks-damages-after-anti-tamper-protections-bypassed-in-26-games">Tom's Hardware</a>.</p>
+
+<h3>2. Control Resonant Steam build leak reported before release</h3>
+<p>Reporting on September 24 said a working Steam build of <strong>Control Resonant</strong> circulated online roughly a day before its official release, allowing unauthorized early access. The report concerns distribution of a leaked build rather than a confirmed new Denuvo bypass, and it does not establish that the game's DRM itself had been defeated. Remedy subsequently released the official game and a day-one patch addressing gameplay balance and other issues.</p>
+<p>Source: <a href="https://www.notebookcheck.net/Control-Resonant-Steam-build-leaks-before-release-date-giving-pirates-early-access.1406843.0.html">Notebookcheck</a>.</p>
+
+<h3>3. Recent Denuvo cracks remain a documented part of the wider DRM cycle</h3>
+<p>Recent reporting documented a burst of Denuvo-protected games being bypassed, including <strong>Mortal Kombat 1</strong> and <strong>Persona 3 Reload</strong>, alongside other titles. The reporting distinguishes these conventional protection bypasses from claims of broader hypervisor-level techniques. Individual release claims can change quickly, so unverified community assertions are not treated as confirmed releases here.</p>
+<p>Source: <a href="https://www.notebookcheck.net/Mortal-Kombat-is-1-of-6-Denuvo-games-cracked-in-24-hours-as-piracy-jeopardizes-DRM.1392414.0.html">Notebookcheck</a>.</p>
+
+<h3>4. DRM removals continue alongside new protection deployments</h3>
+<p>Publishers continue removing Denuvo from some older PC games while other new releases continue launching with Anti-Tamper or other DRM. This creates a continuing cycle in which protection is deployed around launch, later removed for selected titles, and separately targeted by circumvention researchers. The pattern remains relevant to preservation, modding and Linux compatibility because DRM changes can alter how games behave after launch.</p>
+
+<h3>5. Legal and platform enforcement remains part of the scene</h3>
+<p>Current PC piracy developments are not limited to cracks: lawsuits, takedowns, platform enforcement and publisher DRM policy all affect availability and distribution. The voices38 case is the most prominent current Denuvo legal action, while the Control Resonant leak demonstrates that unauthorized distribution can occur even without a newly confirmed DRM breakthrough.</p>
+
+<p>Confirmed developments are separated above from rumors and unverified release claims. No piracy links or circumvention instructions are included.</p>
+]]></description>
+    </item>
   </channel>
 </rss>
