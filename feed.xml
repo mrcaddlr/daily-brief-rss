@@ -199,5 +199,112 @@
 <p>This section is intentionally limited to current, concrete developments rather than filling space with recurring DRM background.</p>
 ]]></description>
     </item>
+
+    <item>
+      <title>Daily Gaming &amp; Tech Brief — October 1, 2026</title>
+      <link>https://mrcaddlr.github.io/daily-brief-rss/</link>
+      <guid isPermaLink="false">daily-brief-2026-10-01</guid>
+      <pubDate>Thu, 1 Oct 2026 23:00:00 +0800</pubDate>
+      <description><![CDATA[
+<h2>1. GAME &amp; TECH NEWS</h2>
+<h3>GAME NEWS</h3>
+
+<h4>1. Steam Autumn Sale begins October 1</h4>
+<p>Valve's Autumn Sale runs October 1–8, 2026, with discounts reaching up to 90% across a large catalog. The event is one of the year's five major Steam sales and gives publishers a final broad promotional window before the holiday campaign.</p>
+<p>Source: <a href="https://www.steamdb.com/en/tools/steam-sales">SteamDB</a>.</p>
+
+<h4>2. Control Resonant continues post-launch tuning</h4>
+<p>Remedy's Control Resonant launched September 24 and received a day-one balance patch that adjusted several encounters after player feedback. The release is now in the early post-launch phase, where performance fixes, difficulty tuning and review momentum will shape its first month.</p>
+<p>Source: <a href="https://kotaku.com/control-resonant-gets-day-one-patch-making-enemies-easier-to-kill-2000736960">Kotaku</a>.</p>
+
+<h4>3. Minecraft's The Sift expands the franchise's long-term roadmap</h4>
+<p>Mojang revealed The Sift during Minecraft LIVE on September 26 as the franchise's fourth dimension, following the Overworld, Nether and End. The dimension first appears in Minecraft Dungeons II, which launched September 29, and is planned for Java and Bedrock Edition in 2027.</p>
+<p>Source: <a href="https://www.minecraft.net/en-us/article/mclive_sept2026_recap">Mojang</a>.</p>
+
+<h4>4. Marvel's Wolverine receives another accessibility and UI update</h4>
+<p>Insomniac's September update expanded player control over Senses indicators, including Scent Trails and Audio Clues. The changes follow an earlier hotfix that reduced visual intensity and fixed crashes, showing the studio is continuing to respond to launch feedback rather than treating the release as finished.</p>
+<p>Source: <a href="https://support.insomniac.games/hc/en-us/articles/55566410009107-Update-v-01-001-005">Insomniac Games</a>.</p>
+
+<h4>5. Japan's PC market keeps gaining ground</h4>
+<p>Recent industry reporting says PC gaming in Japan has grown by more than 200% over four years. The change matters for publishers because Japanese players are increasingly part of simultaneous global PC launches instead of being treated as a primarily console-and-mobile audience.</p>
+<p>Source: <a href="https://kotaku.com/pc-gaming-grows-over-200-percent-in-four-years-in-japan-as-global-hits-break-through-2000736037">Kotaku</a>.</p>
+
+<h3>TECH NEWS</h3>
+
+<h4>1. Intel 14A draws evaluation interest from major technology companies</h4>
+<p>Reporting on September 25 said Amazon, Apple, AMD, Google, Tesla, Microsoft, Nvidia and Qualcomm were evaluating Intel's 14A process. Evaluations are not confirmed production contracts, but the list is important for Intel's foundry ambitions and for companies seeking additional advanced-node capacity.</p>
+<p>Source: <a href="https://www.techspot.com/news/109655-amazon-apple-amd-google-tesla-microsoft-nvidia.html">TechSpot</a>.</p>
+
+<h4>2. SteamOS 3.8.28 expands graphics and hardware support</h4>
+<p>Valve released SteamOS 3.8.28 with a new major Mesa graphics driver, improved VRAM handling, more Steam Controller support and preliminary Steam Frame Wireless Adapter support. The update also fixed a long startup delay affecting some games on non-Valve hardware, reinforcing SteamOS's expansion beyond the Steam Deck.</p>
+<p>Source: <a href="https://www.steamdeck.com/en/news">Valve</a>.</p>
+
+<h4>3. Proton Experimental restores compatibility for several older games</h4>
+<p>A September 25 Proton Experimental update restored support for CEG-protected games after a regression and fixed Japanese text rendering in Killer7. It also addressed Crysis compatibility problems on some newer AMD processors and added early 32-bit OpenXR support.</p>
+<p>Source: <a href="https://www.digitalcitizen.life/proton-experimental-update-fixes-killer7-japanese-text-and-crysis-issues-on-newer-amd-cpus/">Digital Citizen</a>.</p>
+
+<h4>4. Googlebook pushes AI-first laptop branding</h4>
+<p>Google launched Googlebook on September 21 as a premium laptop category built around Gemini features. The move puts Google's AI stack closer to the center of laptop buying decisions and adds pressure to Windows and ChromeOS vendors that have been trying to define the “AI PC” category.</p>
+<p>Source: <a href="https://indianexpress.com/article/technology/tech-news-technology/googlebook-launched-specs-gemini-ai-features-pricing-10888614/">The Indian Express</a>.</p>
+
+<h4>5. Linux kernel 7.2.8 and 7.3-rc5 are current</h4>
+<p>The Linux kernel project lists stable 7.2.8, released September 25, and mainline 7.3-rc5, released September 27. The releases matter to desktop users because kernel changes feed into hardware support, security fixes and the compatibility base used by distributions and gaming stacks.</p>
+<p>Source: <a href="https://www.kernel.org/">Kernel.org</a>.</p>
+
+<hr/>
+<h2>2. STEAM SALE / EVENT</h2>
+<h3>Steam Autumn Sale — October 1–8, 2026</h3>
+<p>The Autumn Sale is a genuine platform-wide Steam promotion with discounts of up to 90% on participating games. It follows the June–July Summer Sale and is the main early-October discount event, with individual publishers setting the exact prices and included titles.</p>
+<p>Source: <a href="https://www.steamdb.com/en/tools/steam-sales">SteamDB</a>.</p>
+
+<h3>Upcoming Steam Scream Fest — October 26–November 2, 2026</h3>
+<p>Steam's next themed promotion is the Halloween-focused Steam Scream Fest, scheduled for October 26 through November 2. The event is expected to combine themed discounts, demos and horror-related spotlights, but the final participating catalog is controlled by Valve and publishers.</p>
+<p>Source: <a href="https://steamcommunity.com/groups/steamworks/announcements/detail/493837645658461608">Steamworks</a>.</p>
+
+<hr/>
+<h2>3. XODUS</h2>
+<p><strong>Progress: active development toward game execution</strong></p>
+<ul>
+<li><strong>Authentication and package delivery remain documented working foundations.</strong> Xodus documentation identifies login, package downloading and license acquisition as functioning parts of the stack.</li>
+<li><strong>MSIXVC remains the central packaging problem.</strong> The project continues work around package parsing, downloading and executable decryption for Xbox PC software.</li>
+<li><strong>Xbox runtime compatibility is still the main blocker.</strong> The project maintains an open-source xgameruntime.dll effort for Wine and continues documenting the Windows Xbox runtime interfaces that games expect.</li>
+<li><strong>Recent repository activity shows continued engineering.</strong> The core Xodus repository was updated September 25, while related Wine work was updated September 15.</li>
+<li><strong>Broad game execution is not established.</strong> No official numeric completion percentage or broad compatibility guarantee has been published, and individual titles will still depend on their GDK and runtime requirements.</li>
+</ul>
+<p>Sources: <a href="https://github.com/xodus-gaming/xodus">Xodus repository</a>; <a href="https://github.com/xodus-gaming">Xodus GitHub organization</a>.</p>
+
+<hr/>
+<h2>4. FREE GAMES</h2>
+<h3>Epic Games Store — October 1–8</h3>
+<p><strong>Buried Stars</strong> and <strong>System Shock 2: 25th Anniversary Remaster</strong> are the Epic Games Store PC free-to-keep games for October 1 through October 8, 2026. Both are permanent claims when redeemed during the weekly promotion window.</p>
+<p>Source: <a href="https://www.pcgamer.com/epic-games-store-free-games-list/">PC Gamer</a>.</p>
+
+<h3>Epic Games Store — September 24–October 1</h3>
+<p><strong>Astrea: Six-Sided Oracles</strong> and <strong>Mechabellum</strong> were the previous weekly free-to-keep pair and expire at the October 1 turnover. They should be treated as a separate offer from the new October 1–8 games.</p>
+<p>Source: <a href="https://www.pcgamer.com/epic-games-store-free-games-list/">PC Gamer</a>.</p>
+
+<h3>Amazon Prime / Luna</h3>
+<p>No fresh October Prime/Luna claim list was confirmed in the current sources checked for this edition. Earlier September drops included Hue, The Da Vinci Cryptex and High on Life from September 24, with prior waves including DOOM Eternal, Rims Racing and Wall World 2.</p>
+
+<hr/>
+<h2>5. LINUX APPS</h2>
+<h3>1. Music Assistant Desktop</h3>
+<p>Music Assistant's desktop client provides a dedicated Linux front end for Music Assistant installations and ships AppImage, Flatpak and RPM builds. It is useful for turning a self-hosted music setup into a proper desktop app instead of a browser tab.</p>
+<p>Source: <a href="https://github.com/music-assistant/desktop-app/releases">Music Assistant releases</a>.</p>
+
+<h3>2. IPFS Desktop</h3>
+<p>IPFS Desktop gives Linux users a graphical way to manage IPFS nodes, files and content identifiers. Its recent release line updated the bundled Kubo and Electron components and fixed desktop integration issues.</p>
+<p>Source: <a href="https://github.com/ipfs/ipfs-desktop/releases">IPFS Desktop releases</a>.</p>
+
+<h3>3. Zen Browser</h3>
+<p>Zen Browser is a Firefox-based browser with a highly customizable interface and native Linux packages, including AppImage builds for x86_64 and ARM64. It is a more distinctive alternative to another generic Chromium wrapper.</p>
+<p>Source: <a href="https://github.com/zen-browser/desktop/releases">Zen Browser releases</a>.</p>
+
+<hr/>
+<h2>6. PIRACY SCENE</h2>
+<p><strong>No major confirmed developments in the current-day or previous-day window.</strong> The available current reporting does not establish a new PC-game crack or release, a newly documented DRM bypass, a fresh DRM removal, a new court action, a major takedown or a new publisher response dated September 30 or October 1, 2026.</p>
+<p>Older stories such as the September 14 Denuvo-versus-Voices38 filing, the September 24 Control Resonant leak and earlier Denuvo crack reports are excluded because there is no newly reported development attached to them in the current window. Rumors and unverified release claims are also excluded unless independently confirmed.</p>
+]]></description>
+    </item>
   </channel>
 </rss>
