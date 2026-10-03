@@ -51,13 +51,45 @@ button{font:inherit}
 }
 .btn:hover{background:var(--soft);border-color:#edbfd2;text-decoration:none}
 .btn.primary{background:var(--pink);border-color:var(--pink);color:#fff;box-shadow:0 7px 18px #ff4f9128}
-.hero{position:relative;background:rgba(255,255,255,.86);border:1px solid var(--line);border-radius:28px;padding:32px 34px 30px;box-shadow:var(--shadow);overflow:hidden}
+.liquid-glass{
+ position:relative;
+ isolation:isolate;
+ background:linear-gradient(135deg,rgba(255,255,255,.62),rgba(255,255,255,.38) 48%,rgba(255,255,255,.52));
+ border:1px solid rgba(255,255,255,.72);
+ box-shadow:
+   0 18px 50px rgba(112,54,82,.12),
+   0 2px 8px rgba(112,54,82,.07),
+   inset 1px 1px 0 rgba(255,255,255,.82),
+   inset -1px -1px 0 rgba(255,79,145,.08);
+ backdrop-filter:blur(18px) saturate(145%);
+ -webkit-backdrop-filter:blur(18px) saturate(145%);
+ overflow:hidden;
+}
+.liquid-glass::before{
+ content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;border-radius:inherit;
+ background:
+   radial-gradient(90% 70% at var(--glass-x,20%) var(--glass-y,0%),rgba(255,255,255,.62),transparent 48%),
+   linear-gradient(120deg,rgba(255,255,255,.20),transparent 38%,rgba(255,143,186,.08));
+}
+.liquid-glass::after{
+ content:"";position:absolute;z-index:0;top:-55%;left:-35%;width:28%;height:210%;
+ background:linear-gradient(90deg,transparent,rgba(255,255,255,.52),transparent);
+ transform:translateX(-180%) rotate(14deg);
+ opacity:0;
+ pointer-events:none;
+ animation:liquidReflection 9s cubic-bezier(.2,.7,.2,1) infinite;
+}
+.liquid-glass>*{position:relative;z-index:1}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+ .liquid-glass{background:rgba(255,255,255,.9)}
+}
+.hero{position:relative;border-radius:28px;padding:32px 34px 30px;box-shadow:var(--shadow);overflow:hidden}
 .hero h1{font-size:clamp(32px,6vw,58px);line-height:1.02;letter-spacing:-.055em;margin:9px 0 10px;max-width:760px;padding-right:80px}
 .hero p{color:var(--muted);margin:0;max-width:670px;font-size:15px;padding-right:80px}
 .sparkles{position:absolute;right:34px;bottom:26px;color:#ff9bc0;font-size:16px;letter-spacing:5px;pointer-events:none;animation:heroFloat 4s ease-in-out infinite}
 .grid{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;margin-top:18px}
 .console,.panel{
- background:rgba(255,255,255,.86);border:1px solid var(--line);
+ background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.72);
  border-radius:22px;box-shadow:var(--shadow);
 }
 .console{overflow:hidden}
@@ -91,9 +123,7 @@ button{font:inherit}
 .brief-body hr{border:0;border-top:1px solid var(--line);margin:34px 0}
 .brief-body code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:#c33b73;background:#fff0f6;padding:2px 5px;border-radius:6px}
 .progress-dock{
- margin-top:18px;padding:14px 18px;background:rgba(255,255,255,.78);
- border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);
- backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+ margin-top:18px;padding:14px 18px;border-radius:18px;
 }
 .progress-label{display:flex;align-items:center;justify-content:space-between;margin-bottom:9px;color:var(--muted);font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
 .progress-label strong{color:var(--pink);font-size:13px;letter-spacing:0}
@@ -112,10 +142,12 @@ button{font:inherit}
 @keyframes heroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
 @keyframes logoBounce{0%,100%{transform:rotate(0) scale(1)}50%{transform:rotate(-3deg) scale(1.035)}}
 @keyframes sheen{0%{transform:translateX(-140%) rotate(8deg);opacity:0}15%{opacity:.5}45%,100%{transform:translateX(140%) rotate(8deg);opacity:0}}
+@keyframes liquidReflection{0%,48%{transform:translateX(-180%) rotate(14deg);opacity:0}58%{opacity:.42}76%,100%{transform:translateX(520%) rotate(14deg);opacity:0}}
+@keyframes glassFloat{0%,100%{box-shadow:0 18px 50px rgba(112,54,82,.12),0 2px 8px rgba(112,54,82,.07),inset 1px 1px 0 rgba(255,255,255,.82),inset -1px -1px 0 rgba(255,79,145,.08)}50%{box-shadow:0 22px 58px rgba(112,54,82,.14),0 3px 10px rgba(112,54,82,.08),inset 1px 1px 0 rgba(255,255,255,.86),inset -1px -1px 0 rgba(255,79,145,.10)}}
 @keyframes storyIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 body{background-size:140% 140%,140% 140%,100% 100%;animation:pageDrift 18s ease-in-out infinite}
 .hero{isolation:isolate}
-.hero::before{content:"";position:absolute;inset:-35%;z-index:-1;background:radial-gradient(circle at var(--hero-x,50%) var(--hero-y,35%),rgba(255,143,186,.22),transparent 28%);pointer-events:none;transition:background-position .25s ease}
+.hero::before{content:"";position:absolute;inset:-35%;z-index:-2;background:radial-gradient(circle at var(--hero-x,50%) var(--hero-y,35%),rgba(255,143,186,.22),transparent 28%);pointer-events:none;transition:background-position .25s ease}
 .hero::after{content:"";position:absolute;top:-30%;bottom:-30%;left:-35%;width:22%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.6),transparent);transform:translateX(-140%) rotate(8deg);pointer-events:none;animation:sheen 8s ease-in-out 1.5s infinite}
 .mark{animation:logoBounce 4s ease-in-out 1.2s infinite}
 .readout{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s cubic-bezier(.22,.8,.2,1)}
@@ -181,7 +213,7 @@ body{background-size:140% 140%,140% 140%,100% 100%;animation:pageDrift 18s ease-
   </nav>
 </header>
 
-<section class="hero">
+<section class="hero liquid-glass">
   <div class="eyebrow">good morning · systems online</div>
   <h1>the world, but make it readable.</h1>
   <p>gaming, technology, linux, free stuff, and the occasional xodus status report. neatly packed into one little daily brief.</p>
@@ -189,13 +221,13 @@ body{background-size:140% 140%,140% 140%,100% 100%;animation:pageDrift 18s ease-
 </section>
 
 <div class="grid">
-<section class="console" aria-label="Daily brief reader">
+<section class="console liquid-glass" aria-label="Daily brief reader">
   <div class="console-head"><span>today's report</span><span id="indicator">♡ standby</span></div>
   <div id="reader"><div class="empty">loading today's little pile of news…</div></div>
 </section>
 </div>
 
-<div class="progress-dock" aria-label="Project progress">
+<div class="progress-dock liquid-glass" aria-label="Project progress">
   <div class="progress-label"><span>progress</span><strong id="progressValue">70%</strong></div>
   <div class="progress-track"><i id="progressBar" style="width:70%"></i></div>
 </div>
@@ -218,6 +250,19 @@ function observeStories(){
    entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');io.unobserve(entry.target)}});
  },{threshold:.08,rootMargin:'0px 0px -5% 0px'});
  items.forEach((el,i)=>{el.style.transitionDelay=Math.min(i*55,300)+'ms';io.observe(el)});
+}
+function glassMotion(){
+ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ const glass=[...document.querySelectorAll('.liquid-glass')];
+ let raf=0,x=20,y=10;
+ window.addEventListener('pointermove',e=>{
+   x=(e.clientX/window.innerWidth)*100;y=(e.clientY/window.innerHeight)*100;
+   if(raf)return;
+   raf=requestAnimationFrame(()=>{
+     glass.forEach(el=>{el.style.setProperty('--glass-x',x+'%');el.style.setProperty('--glass-y',y+'%')});
+     raf=0;
+   });
+ },{passive:true});
 }
 function pointerMotion(){
  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
@@ -281,7 +326,7 @@ async function loadFeed(){
  }finally{refresh.disabled=false}
 }
 refresh.addEventListener('click',loadFeed);
-setupProgress();pointerMotion();loadFeed();
+setupProgress();glassMotion();pointerMotion();loadFeed();
 </script>
 </body>
 </html>
