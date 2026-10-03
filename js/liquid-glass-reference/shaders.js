@@ -377,8 +377,9 @@ export const fragmentShaderSource = `
                 finalColor.rgb += vec3(edgeGlow);
             }
         } else if (isOutsideLiquidGlass) {
-            // Render normal background outside liquid glass areas
-            finalColor = renderBackground(currentPixelCoord, u_gridSpacing, u_gridLineColor, u_pageBackgroundColor);
+            // Keep the canvas transparent outside the glass shape so the page's
+            // animated background and the panel's own CSS backing show through.
+            finalColor = vec4(0.0, 0.0, 0.0, 0.0);
         } else {
             // Render main liquid glass effect
             vec2 normDirToCenter = normalize(relativeToLiquidGlassCenter);
