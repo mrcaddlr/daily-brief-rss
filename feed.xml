@@ -45,13 +45,15 @@
 <p><strong>Publisher spotlight: 2K Autumn Sale.</strong> 2K announced discounts across its Steam catalogue through October 8, including titles spanning action, sports and strategy. Exact discounts vary by game and region; check the individual Steam store pages for the live price and end time. <strong>Source:</strong> <a href="https://store.steampowered.com/oldnews/?appgroupname=2K+Collection&amp;appids=8850%2C8980%2C57900%2C50130%2C50300%2C67370&amp;feed=steam_community_announcements">2K's Steam announcement</a>.</p>
 <hr/>
 <h2>3. XODUS</h2>
-<p><strong>Progress: active development toward game execution</strong></p>
+<p><strong>Estimated progress: 70%</strong></p>
+<p><strong>Daily changes / latest project activity:</strong></p>
 <ul>
-<li><strong>Core project:</strong> Xodus describes itself as an open-source effort to bring Xbox PC and Game Pass games to Linux and macOS; its core repository covers authentication, token exchange, package downloads and license acquisition. <strong>Source:</strong> <a href="https://github.com/xodus-gaming/xodus">Xodus GitHub</a>.</li>
-<li><strong>Runtime implementation:</strong> The companion <code>xgameruntime</code> project is implementing Microsoft's Xbox PC runtime APIs needed by GDK-based games running through Wine. <strong>Source:</strong> <a href="https://github.com/xodus-gaming/xgameruntime">xgameruntime repository</a>.</li>
-<li><strong>Concrete compatibility gaps:</strong> Open issues include missing networking behavior that can cause Unreal-based GDK titles to fail during initialization, a task-queue hang, and API edge cases that can crash games such as Grounded. <strong>Source:</strong> <a href="https://github.com/xodus-gaming/xgameruntime/issues">xgameruntime issue tracker</a>.</li>
-<li><strong>Wine/Proton integration:</strong> The project maintains patched Wine and Proton components so the runtime can be integrated with the compatibility environment rather than relying on a standalone Windows installation. Broad compatibility is not yet established. <strong>Source:</strong> <a href="https://github.com/xodus-gaming">Xodus project organization</a>.</li>
+<li>Added <strong>HashTreeStream</strong>, PageStream/PageVerifier work and related tests for MSIXVC hash-tree handling.</li>
+<li>Added handling for malformed and oversized SOAP responses.</li>
+<li>Opened/continued work around the GDK integration, including streaming, downloads, connected storage and Xodus service architecture.</li>
+<li>Recent open work includes the XTaskQueue/runtime initialization hang, networking connectivity stubs affecting Unreal titles, Grounded-related runtime crashes, and Xbox system API edge cases.</li>
 </ul>
+<p><strong>Estimate note:</strong> 70% is an editorial estimate of overall progress toward the project's broader goal of running Xbox PC/Game Pass GDK games on Linux/macOS, not an official Xodus percentage. Current project documentation says login, package downloads and license acquisition are working, while substantial Wine/runtime compatibility work remains. <strong>Sources:</strong> <a href="https://github.com/xodus-gaming/xodus">Xodus GitHub</a>; <a href="https://github.com/xodus-gaming/xgameruntime/issues">xgameruntime issues</a>.</p>
 <hr/>
 <h2>4. FREE GAMES</h2>
 <h3>Epic Games Store — free to keep until October 8</h3>
