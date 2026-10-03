@@ -180,13 +180,10 @@ body{background:transparent;background-size:140% 140%,140% 140%,100% 100%;animat
 .hero::before{content:"";position:absolute;inset:-35%;z-index:-2;background:radial-gradient(circle at var(--hero-x,50%) var(--hero-y,35%),rgba(255,143,186,.22),transparent 28%);pointer-events:none;transition:background-position .25s ease}
 .hero::after{content:"";position:absolute;top:-30%;bottom:-30%;left:-35%;width:22%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.6),transparent);transform:translateX(-140%) rotate(8deg);pointer-events:none;animation:sheen 8s ease-in-out 1.5s infinite}
 .mark{animation:logoBounce 4s ease-in-out 1.2s infinite}
-.readout{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s cubic-bezier(.22,.8,.2,1)}
-.readout.is-visible{opacity:1;transform:none}
-.readout::after{content:"";display:block;height:2px;margin-top:25px;border-radius:99px;background:linear-gradient(90deg,transparent,#ff8fba,transparent);transform:scaleX(0);transform-origin:center;transition:transform .7s ease .2s;opacity:.35}
-.readout.is-visible::after{transform:scaleX(1)}
+.readout{opacity:1;transform:none;transition:none}
+.readout::after{content:"";display:block;height:2px;margin-top:25px;border-radius:99px;background:linear-gradient(90deg,transparent,#ff8fba,transparent);opacity:.35}
 @media (hover:hover){
  .mark:hover{animation:none;transform:rotate(-5deg) scale(1.06)}
- .readout:hover{transform:translateY(-2px)}
 }
 @media (prefers-reduced-motion:reduce){
  body::before,body::after{animation:none!important}
@@ -292,16 +289,8 @@ const reader=document.getElementById('reader'),indicator=document.getElementById
 const progressBar=document.getElementById('progressBar'),progressValue=document.getElementById('progressValue');
 const dateFmt=new Intl.DateTimeFormat(undefined,{dateStyle:'full'});
 function observeStories(){
- const items=[...reader.querySelectorAll('.readout')];
- if(!items.length)return;
- if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-   items.forEach(el=>el.classList.add('is-visible'));
-   return;
- }
- const io=new IntersectionObserver(entries=>{
-   entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');io.unobserve(entry.target)}});
- },{threshold:.08,rootMargin:'0px 0px -5% 0px'});
- items.forEach((el,i)=>{el.style.transitionDelay=Math.min(i*55,300)+'ms';io.observe(el)});
+ // Long articles must not be hidden behind a scroll-triggered observer.
+ reader.querySelectorAll('.readout').forEach(el=>el.classList.add('is-visible'));
 }
 function glassMotion(){
  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
@@ -353,7 +342,7 @@ function setupProgress(){
 async function loadFeed(){
  refresh.disabled=true;indicator.textContent='♡ reading';
  try{
-  const res=await fetch('feed.xml?ts='+Date.now(),{cache:'no-store'});
+  const res=await fetch(fresh?'feed.xml?ts='+Date.now():'feed.xml',{cache:fresh?'no-store':'default'});
   if(!res.ok)throw new Error();
   const doc=new DOMParser().parseFromString(await res.text(),'application/xml');
   if(doc.querySelector('parsererror'))throw new Error();
