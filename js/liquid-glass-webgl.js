@@ -92,6 +92,25 @@
       return 130.0 * dot(m, g);
     }
 
+    vec3 fluidBackground(vec2 px) {
+      vec2 uv = px / u_resolution.xy;
+      float time = u_time * 0.15 * u_speed;
+      float n1 = snoise(uv * 0.5 + vec2(time*0.1,time*0.2));
+      float n2 = snoise(uv * 1.2 - vec2(time*0.2,time*0.1));
+      vec2 distUV = uv + vec2(n1,n2) * 0.2;
+      float mask1 = snoise(distUV*0.5 + vec2(time*0.1,0.0))*0.5+0.5;
+      float mask2 = snoise(distUV*0.6 + vec2(0.0,time*0.15)+10.0)*0.5+0.5;
+      float mask3 = snoise(distUV*0.4 - vec2(time*0.1,time*0.1)+20.0)*0.5+0.5;
+      float mask4 = snoise(distUV*0.7 + vec2(time*0.15,-time*0.1)+30.0)*0.5+0.5;
+      vec3 color = u_colors[0];
+      color = mix(color,u_colors[1],mask1*0.6);
+      color = mix(color,u_colors[2],mask2*0.6);
+      color = mix(color,u_colors[3],mask3*0.5);
+      color = mix(color,u_colors[4],mask4*0.4);
+      float grain = fract(sin(dot(uv,vec2(12.9898,78.233)))*43758.5453);
+      color += (grain-0.5)*0.018;
+      return clamp(color,0.0,1.0);
+    }
     float sdRoundBox(vec2 p, vec2 b, float r) {
       vec2 q = abs(p) - b + r;
       return min(max(q.x,q.y),0.0) + length(max(q,0.0)) - r;
@@ -301,19 +320,26 @@
     }
   }
 
-  const cover = new Image();
-  cover.crossOrigin = 'anonymous';
-  cover.onload = () => {
-    try {
-      setCoverColors(extractCoverColors(cover));
-    } catch (err) {
-      console.warn('Cover color sampling failed:', err);
-      // The animated renderer still runs with a palette tuned to the artwork.
-      setCoverColors(coverColors);
-    }
-  };
-  cover.onerror = () => setCoverColors(coverColors);
-  cover.src = COVER_IMAGE;
+  let coverAttempt = 0;
+  function loadCover() {
+    const cover = new Image();
+    cover.crossOrigin = 'anonymous';
+    cover.onload = () => {
+      try {
+        setCoverColors(extractCoverColors(cover));
+      } catch (err) {
+        console.warn('Cover color sampling failed:', err);
+        if (++coverAttempt < COVER_SOURCES.length) loadCover();
+        else setCoverColors(coverColors);
+      }
+    };
+    cover.onerror = () => {
+      if (++coverAttempt < COVER_SOURCES.length) loadCover();
+      else setCoverColors(coverColors);
+    };
+    cover.src = COVER_SOURCES[coverAttempt];
+  }
+  loadCover();
 
   let pointerX = innerWidth * 0.5;
   let pointerY = innerHeight * 0.25;
