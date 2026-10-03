@@ -73,13 +73,12 @@
 <p><strong>New October Luna claim window:</strong> DOOM (GOG) and Five Nights at Freddy's: Into the Pit were reported added for Prime members with claims open until November 4. <strong>Source:</strong> <a href="https://www.notebookcheck.net/Amazon-adds-two-new-free-games-to-Luna-including-a-survival-horror-adventure.1413750.0.html">Notebookcheck, October 2</a>.</p>
 <hr/>
 <h2>5. LINUX APPS</h2>
-<h3>1. Fooyin</h3>
-<p>A highly customizable desktop music player with a queue-focused interface, Last.fm support and global shortcuts. Recent work includes improved queue controls and the ability to open and play audio CDs, read CD-Text, fetch metadata and rip tracks to MP3 or Opus with AccurateRip checks. <strong>Source:</strong> <a href="https://www.omgubuntu.co.uk/2026/10/linux-app-release-roundup-september-2026">OMG! Ubuntu's September app roundup</a>.</p>
-<h3>2. Laser</h3>
-<p>A GTK4/libadwaita audio-CD ripping application aimed at making physical music collections easier to archive. It is a focused, modern option for users who want a graphical workflow for reading CDs and managing their digital copies. <strong>Source:</strong> <a href="https://github.com/laser-audio/laser">Laser project</a>.</p>
-<h3>3. Tauno Serial Plotter</h3>
-<p>A compact tool for visualizing data arriving over a serial connection in real time, useful for microcontrollers, sensors and electronics experiments. Live plots make changing readings easier to understand than a terminal full of raw numbers. <strong>Source:</strong> <a href="https://github.com/taunoe/tauno-serial-plotter">Tauno Serial Plotter project</a>.</p>
-
+<h3>1. Shotcut 26.9.27</h3>
+<p>The open-source video editor added adjustment clips, which let filters affect the composite of tracks below, plus automatic audio ducking, timeline performance improvements and a fix for VA-API HEVC hardware encoding on Linux. It is a useful update for editors who want a capable desktop timeline without a subscription. <strong>Source:</strong> <a href="https://www.shotcut.org/">Shotcut official site</a>; <a href="https://www.omgubuntu.co.uk/2026/10/linux-app-release-roundup-september-2026">September Linux app roundup</a>.</p>
+<h3>2. Tributary 0.7.0 alpha</h3>
+<p>This GTK4 music player connects to Subsonic, Jellyfin, Plex or DAAP servers and adds a 10-band equalizer. The September alpha also supports downloading tracks for offline listening and drag-and-drop between the player, playlists and file manager. <strong>Source:</strong> <a href="https://www.omgubuntu.co.uk/2026/10/linux-app-release-roundup-september-2026">OMG! Ubuntu's September app roundup</a>.</p>
+<h3>3. Fooyin 0.13</h3>
+<p>A Qt music player inspired by Foobar2000, Fooyin added audio-CD playback and ripping, CD-Text reading, online metadata lookup and AccurateRip verification. Recent additions also include a reworked playback queue, Last.fm track love support and global playback shortcuts. <strong>Source:</strong> <a href="https://github.com/fooyin/fooyin/releases">Fooyin releases</a>; <a href="https://www.omgubuntu.co.uk/2026/10/linux-app-release-roundup-september-2026">September Linux app roundup</a>.</p>
 ]]></description>
     </item>
 
