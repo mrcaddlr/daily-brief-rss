@@ -55,7 +55,7 @@ button{font:inherit}
 .hero h1{font-size:clamp(32px,6vw,58px);line-height:1.02;letter-spacing:-.055em;margin:9px 0 10px;max-width:760px;padding-right:80px}
 .hero p{color:var(--muted);margin:0;max-width:670px;font-size:15px;padding-right:80px}
 .sparkles{position:absolute;right:34px;bottom:26px;color:#ff9bc0;font-size:16px;letter-spacing:5px;pointer-events:none}
-.grid{display:grid;grid-template-columns:minmax(0,1fr) 285px;gap:18px;margin-top:18px}
+.grid{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;margin-top:18px}
 .console,.panel{
  background:rgba(255,255,255,.86);border:1px solid var(--line);
  border-radius:22px;box-shadow:var(--shadow);
@@ -90,6 +90,27 @@ button{font:inherit}
 .brief-body strong{color:#2b2329;font-weight:700}
 .brief-body hr{border:0;border-top:1px solid var(--line);margin:34px 0}
 .brief-body code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:#c33b73;background:#fff0f6;padding:2px 5px;border-radius:6px}
+.progress-dock{
+ margin-top:18px;padding:14px 18px;background:rgba(255,255,255,.78);
+ border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);
+ backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+}
+.progress-label{display:flex;align-items:center;justify-content:space-between;margin-bottom:9px;color:var(--muted);font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.progress-label strong{color:var(--pink);font-size:13px;letter-spacing:0}
+.progress-track{height:8px;background:#f8e7ef;border-radius:99px;overflow:hidden}
+.progress-track i{display:block;height:100%;width:70%;background:linear-gradient(90deg,#ff9abd,#ff4f91);border-radius:inherit;transform-origin:left center;animation:progressIn 1s cubic-bezier(.22,.8,.2,1) both}
+@media (prefers-reduced-motion:no-preference){
+ .progress-dock{animation:fadeUp .65s .28s both}
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes ambientDrift{from{transform:translate3d(-1.5%,0,0) scale(1)}to{transform:translate3d(1.5%,2%,0) scale(1.04)}}
+@keyframes particleFloat{from{transform:translateY(0)}to{transform:translateY(-26px)}}
+@keyframes glassSweep{0%,35%{transform:translateX(-55%) rotate(3deg)}75%,100%{transform:translateX(55%) rotate(3deg)}}
+@keyframes storySheen{from{transform:translateX(-110%)}to{transform:translateX(120%)}}
+@keyframes progressIn{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
 .side{display:flex;flex-direction:column;gap:14px}
 .panel{padding:19px}
 .panel h2{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#9a8490;margin:0 0 13px}
@@ -110,7 +131,6 @@ button{font:inherit}
 .footer{text-align:center;color:#aa98a2;font-size:11px;padding-top:22px}
 .empty,.error{padding:24px;color:var(--muted)}
 @media(max-width:800px){
- .grid{grid-template-columns:1fr}.side{display:grid;grid-template-columns:1fr 1fr}
  .hero{padding:27px}.sparkles{display:block;right:24px;bottom:18px}
 }
 @media(max-width:560px){
@@ -120,10 +140,10 @@ button{font:inherit}
  .brand strong{font-size:43px}
  .controls{margin-left:auto;flex-shrink:0}
  .hero{border-radius:22px;padding:24px 21px}.hero h1{font-size:38px;padding-right:0}.hero p{padding-right:0}.sparkles{display:none}
- .grid{margin-top:12px}.side{display:flex}
+ .grid{margin-top:12px}
  .readout{padding:22px 19px}.console{border-radius:18px}
 }
-</style>
+.click-ripple{position:fixed;z-index:20;width:20px;height:20px;border:1px solid rgba(255,79,145,.36);border-radius:50%;transform:translate(-50%,-50%) scale(.2);pointer-events:none;opacity:.9}.click-ripple.go{animation:rippleOut .62s cubic-bezier(.15,.7,.25,1) forwards}@keyframes rippleOut{to{transform:translate(-50%,-50%) scale(10);opacity:0}}</style>
 </head>
 <body>
 <main class="shell">
@@ -155,32 +175,11 @@ button{font:inherit}
   <div class="console-head"><span>today's report</span><span id="indicator">♡ standby</span></div>
   <div id="reader"><div class="empty">loading today's little pile of news…</div></div>
 </section>
+</div>
 
-<aside class="side">
-  <div class="panel">
-    <h2>xodus watch</h2>
-    <div class="xodus"><div class="big">70%</div><div class="cutie" aria-hidden="true">♡</div></div>
-    <div class="meter"><i></i></div>
-    <p class="note">editorial estimate of overall project progress</p>
-  </div>
-  <div class="panel">
-    <h2>what's inside</h2>
-    <div class="channel"><span class="dot"></span>game news</div>
-    <div class="channel"><span class="dot"></span>technology</div>
-    <div class="channel"><span class="dot"></span>steam & events</div>
-    <div class="channel"><span class="dot"></span>free games</div>
-    <div class="channel"><span class="dot"></span>linux apps</div>
-    <div class="tiny">no doomscrolling required. probably.</div>
-  </div>
-  <div class="panel">
-    <h2>little system note</h2>
-    <div class="kv">
-      <span>feed</span><span>rss 2.0</span>
-      <span>reader</span><span>live</span>
-      <span>archive</span><span>forward only</span>
-    </div>
-  </div>
-</aside>
+<div class="progress-dock" aria-label="Project progress">
+  <div class="progress-label"><span>progress</span><strong id="progressValue">70%</strong></div>
+  <div class="progress-track"><i id="progressBar" style="width:70%"></i></div>
 </div>
 
 <footer class="footer">daily brief · made with an unreasonable amount of care · <a href="feed.xml">raw rss</a></footer>
@@ -188,7 +187,54 @@ button{font:inherit}
 
 <script>
 const reader=document.getElementById('reader'),indicator=document.getElementById('indicator'),refresh=document.getElementById('refresh');
+const progressBar=document.getElementById('progressBar'),progressValue=document.getElementById('progressValue');
 const dateFmt=new Intl.DateTimeFormat(undefined,{dateStyle:'full'});
+function observeStories(){
+ const items=[...reader.querySelectorAll('.readout')];
+ if(!items.length)return;
+ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+   items.forEach(el=>el.classList.add('is-visible'));
+   return;
+ }
+ const io=new IntersectionObserver(entries=>{
+   entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');io.unobserve(entry.target)}});
+ },{threshold:.08,rootMargin:'0px 0px -5% 0px'});
+ items.forEach((el,i)=>{el.style.transitionDelay=Math.min(i*55,300)+'ms';io.observe(el)});
+}
+function pointerMotion(){
+ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ let raf=0,lastX=0,lastY=0;
+ window.addEventListener('pointermove',e=>{
+   lastX=(e.clientX/window.innerWidth)*100;lastY=(e.clientY/window.innerHeight)*100;
+   if(raf)return;
+   raf=requestAnimationFrame(()=>{
+     document.body.style.setProperty('--mx',lastX+'%');
+     document.body.style.setProperty('--my',lastY+'%');
+     const hero=document.querySelector('.hero');
+     if(hero){
+       const r=hero.getBoundingClientRect();
+       hero.style.setProperty('--hero-x',Math.max(0,Math.min(100,((e.clientX-r.left)/r.width)*100))+'%');
+       hero.style.setProperty('--hero-y',Math.max(0,Math.min(100,((e.clientY-r.top)/r.height)*100))+'%');
+     }
+     raf=0;
+   });
+ },{passive:true});
+}
+function ripple(e){
+ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ const el=document.createElement('span');
+ el.className='click-ripple';
+ document.body.appendChild(el);
+ el.style.left=e.clientX+'px';el.style.top=e.clientY+'px';
+ requestAnimationFrame(()=>el.classList.add('go'));
+ setTimeout(()=>el.remove(),650);
+}
+document.addEventListener('pointerdown',ripple);
+function setupProgress(){
+ const value=70;
+ progressValue.textContent=value+'%';
+ progressBar.style.width=value+'%';
+}
 async function loadFeed(){
  refresh.disabled=true;indicator.textContent='♡ reading';
  try{
@@ -209,13 +255,15 @@ async function loadFeed(){
    body.innerHTML=item.querySelector('description')?.textContent||'';
    article.append(h,meta,body);reader.append(article);
   });
+  observeStories();
   indicator.textContent='♡ nominal';
  }catch(e){
   reader.innerHTML='<div class="error">could not read the feed. <a href="feed.xml">open the raw rss</a>.</div>';
   indicator.textContent='♡ oops';
  }finally{refresh.disabled=false}
 }
-refresh.addEventListener('click',loadFeed);loadFeed();
+refresh.addEventListener('click',loadFeed);
+setupProgress();pointerMotion();loadFeed();
 </script>
 </body>
 </html>
