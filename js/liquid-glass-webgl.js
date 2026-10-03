@@ -164,6 +164,13 @@ import ReflectionBorder from './liquid-glass-reference/reflections.js';
   // first WebGL frame. Track its actual box instead of waiting for a scroll/resize.
   const sizeObserver = new ResizeObserver(scheduleRender);
   targets.forEach(({el}) => sizeObserver.observe(el));
+
+  // Feed content is inserted asynchronously; redraw after the report layout updates.
+  const reader = document.querySelector('#reader');
+  if (reader) {
+    const contentObserver = new MutationObserver(scheduleRender);
+    contentObserver.observe(reader, { childList: true, subtree: true, characterData: true });
+  }
   window.addEventListener('resize', scheduleRender, { passive: true });
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(scheduleRender);
   scheduleRender();
