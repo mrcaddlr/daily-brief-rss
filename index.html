@@ -3,29 +3,123 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>daily brief rss</title>
+  <meta name="theme-color" content="#17131c">
+  <title>Daily Gaming &amp; Tech Brief</title>
   <style>
-    :root { color-scheme: dark; }
-    body { margin: 0; min-height: 100vh; display: grid; place-items: center; font-family: system-ui, sans-serif; background: #17131c; color: #f4eefa; }
-    main { width: min(680px, calc(100% - 40px)); padding: 42px 0; }
-    .flower { font-size: 42px; }
-    h1 { margin: 8px 0; font-size: clamp(32px, 7vw, 54px); }
-    p { color: #cfc3d9; line-height: 1.7; }
-    a { color: #f2b9df; }
-    code { padding: 3px 7px; border-radius: 7px; background: #29222f; }
-    .card { margin-top: 28px; padding: 22px; border: 1px solid #392f42; border-radius: 18px; background: #201a27; }
+    :root { color-scheme: dark; --bg:#17131c; --panel:#201a27; --line:#403448; --text:#f4eefa; --muted:#cfc3d9; --pink:#f2b9df; --mint:#b7eadb; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100vh; background:radial-gradient(ellipse at 15% 0%,#302138 0,transparent 38rem),var(--bg); color:var(--text); font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    a { color:var(--pink); text-underline-offset:3px; } a:hover { color:#fff; }
+    .wrap { width:min(980px,calc(100% - 32px)); margin:0 auto; padding:34px 0 64px; }
+    header { display:flex; align-items:flex-start; justify-content:space-between; gap:18px; margin-bottom:28px; }
+    .mark { display:inline-grid; place-items:center; width:46px; height:46px; border-radius:15px; background:#39263a; color:var(--pink); font-size:27px; }
+    h1 { margin:10px 0 4px; font-size:clamp(30px,6vw,48px); line-height:1.1; letter-spacing:-.04em; }
+    .sub { margin:0; color:var(--muted); }
+    .actions { display:flex; flex-wrap:wrap; gap:9px; margin-top:8px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; border:1px solid var(--line); border-radius:12px; padding:9px 13px; background:var(--panel); color:var(--text); font:inherit; text-decoration:none; cursor:pointer; }
+    .btn.primary { background:var(--pink); border-color:var(--pink); color:#241723; font-weight:650; }
+    .btn:focus-visible,a:focus-visible { outline:2px solid var(--mint); outline-offset:3px; }
+    .toolbar { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; margin:24px 0 14px; }
+    .eyebrow { margin:0; color:var(--mint); font-size:12px; font-weight:750; letter-spacing:.12em; text-transform:uppercase; }
+    #status { color:var(--muted); font-size:13px; }
+    .brief { overflow:hidden; border:1px solid var(--line); border-radius:20px; background:rgba(32,26,39,.94); box-shadow:0 16px 50px #0002; }
+    .brief-head { padding:22px 24px 18px; border-bottom:1px solid var(--line); background:linear-gradient(110deg,#302238,#201a27 65%); }
+    .brief-head h2 { margin:0 0 5px; font-size:clamp(21px,4vw,29px); line-height:1.25; }
+    .brief-meta { margin:0; color:var(--muted); font-size:13px; }
+    .brief-body { padding:24px; overflow-wrap:anywhere; }
+    .brief-body h2 { margin:1.5em 0 .45em; font-size:1.4rem; line-height:1.3; }
+    .brief-body h2:first-child { margin-top:0; }
+    .brief-body h3 { margin:1.35em 0 .4em; font-size:1.12rem; }
+    .brief-body h4 { margin:1.2em 0 .3em; font-size:1rem; }
+    .brief-body p { margin:.55em 0 1em; color:#e6ddea; }
+    .brief-body ul,.brief-body ol { padding-left:1.5em; }
+    .brief-body li { margin:.4em 0; }
+    .brief-body img { max-width:100%; height:auto; }
+    .empty,.error { padding:24px; border:1px solid var(--line); border-radius:16px; background:var(--panel); color:var(--muted); }
+    footer { margin-top:22px; color:var(--muted); font-size:13px; }
+    @media (max-width:600px) { .wrap{width:calc(100% - 22px);padding-top:22px} header{display:block} .actions{margin-top:18px} .brief-head,.brief-body{padding:18px} }
   </style>
 </head>
 <body>
-  <main>
-    <div class="flower">✿</div>
-    <h1>daily brief rss</h1>
-    <p>a tiny little RSS home for the daily gaming &amp; tech brief.</p>
-    <div class="card">
-      <strong>feed.xml</strong>
-      <p>paste this feed into your favorite RSS reader and let the daily brief come to you.</p>
-      <a href="feed.xml">open the RSS feed →</a>
-    </div>
+  <main class="wrap">
+    <header>
+      <div>
+        <div class="mark" aria-hidden="true">✿</div>
+        <h1>Daily Gaming &amp; Tech Brief</h1>
+        <p class="sub">gaming, tech, Steam, free games, Linux apps, and Xodus updates.</p>
+      </div>
+      <nav class="actions" aria-label="Feed actions">
+        <a class="btn primary" href="feed.xml">RSS feed ↗</a>
+        <button class="btn" id="refresh" type="button">Refresh</button>
+      </nav>
+    </header>
+    <section aria-labelledby="latest-label">
+      <div class="toolbar">
+        <p class="eyebrow" id="latest-label">Latest brief</p>
+        <span id="status" role="status">Loading feed…</span>
+      </div>
+      <div id="reader" aria-live="polite"><div class="empty">Loading the latest brief…</div></div>
+    </section>
+    <footer>Powered by the <a href="feed.xml">RSS 2.0 feed</a>. New briefs appear here automatically when published.</footer>
   </main>
+  <script>
+    const reader = document.getElementById('reader');
+    const status = document.getElementById('status');
+    const refresh = document.getElementById('refresh');
+    function readableDate(value) {
+      const date = new Date(value);
+      return Number.isNaN(date.getTime()) ? value : new Intl.DateTimeFormat(undefined, { dateStyle: 'full' }).format(date);
+    }
+    async function loadFeed() {
+      refresh.disabled = true;
+      status.textContent = 'Updating…';
+      try {
+        const response = await fetch('feed.xml?ts=' + Date.now(), { cache: 'no-store' });
+        if (!response.ok) throw new Error('Feed request failed (' + response.status + ')');
+        const doc = new DOMParser().parseFromString(await response.text(), 'application/xml');
+        if (doc.querySelector('parsererror')) throw new Error('The RSS feed could not be parsed.');
+        const items = Array.from(doc.querySelectorAll('channel > item'));
+        if (!items.length) {
+          reader.innerHTML = '<div class="empty">No briefs have been published yet.</div>';
+          status.textContent = '0 briefs';
+          return;
+        }
+        reader.replaceChildren();
+        items.forEach((item, index) => {
+          const title = item.querySelector('title')?.textContent?.trim() || 'Daily brief';
+          const pubDate = item.querySelector('pubDate')?.textContent?.trim() || '';
+          const description = item.querySelector('description')?.textContent || '';
+          const article = document.createElement('article');
+          article.className = 'brief';
+          const head = document.createElement('div');
+          head.className = 'brief-head';
+          const heading = document.createElement('h2');
+          heading.textContent = title;
+          const meta = document.createElement('p');
+          meta.className = 'brief-meta';
+          meta.textContent = pubDate ? readableDate(pubDate) : 'Publication date unavailable';
+          head.append(heading, meta);
+          const body = document.createElement('div');
+          body.className = 'brief-body';
+          body.innerHTML = description;
+          article.append(head, body);
+          reader.append(article);
+          if (index < items.length - 1) {
+            const spacer = document.createElement('div');
+            spacer.style.height = '18px';
+            reader.append(spacer);
+          }
+        });
+        status.textContent = items.length + (items.length === 1 ? ' brief' : ' briefs');
+      } catch (error) {
+        reader.innerHTML = '<div class="error">Could not load the RSS feed. Try refreshing, or open the <a href="feed.xml">raw feed</a> directly.</div>';
+        status.textContent = 'Feed unavailable';
+      } finally {
+        refresh.disabled = false;
+      }
+    }
+    refresh.addEventListener('click', loadFeed);
+    loadFeed();
+  </script>
 </body>
 </html>
