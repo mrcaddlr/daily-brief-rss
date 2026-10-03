@@ -11,63 +11,79 @@ permissions:
 jobs:
   update-feed:
     runs-on: ubuntu-latest
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
 
       - name: Remove Xodus sections from article entries
+        shell: python
         run: |
-          python3 - <<'PY'
           from pathlib import Path
           import re
-          path = Path('feed.xml')
-          text = path.read_text()
-          pattern = re.compile(r'<h2>\\s*\\d+\\.\\s*XODUS\\s*</h2>.*?(?=<h2>\\s*\\d+\\.)', re.I | re.S)
-          cleaned = pattern.sub('', text)
-          cleaned = re.sub(r'<h2>\\s*\\d+\\.\\s*(FREE GAMES|LINUX APPS)\\s*</h2>', lambda m: '<h2>' + ('3. FREE GAMES' if m.group(1).upper() == 'FREE GAMES' else '4. LINUX APPS') + '</h2>', cleaned, flags=re.I)
-          cleaned = re.sub(r'<description>\\s*<!\\[CDATA\\[(.*?)\\]\\]></description>', lambda m: '<description><![CDATA[' + re.sub(r'\\s*<hr\\s*/?>\\s*        run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          from datetime import datetime, timezone
-          path = Path('feed.xml')
-          text = path.read_text()
-          marker = '<!-- last-checked: '
-          start = text.find(marker)
-          if start != -1:
-              end = text.find('-->', start)
-              text = text[:start] + marker + datetime.now(timezone.utc).isoformat() + ' -->' + text[end+3:]
-          else:
-              text = text.replace('<rss version="2.0">', '<rss version="2.0">\n  <!-- last-checked: ' + datetime.now(timezone.utc).isoformat() + ' -->', 1)
-          path.write_text(text)
-          PY
 
-      - name: Commit feed update
-        run: |
-          git config user.name 'daily-brief-rss bot'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add feed.xml
-          git diff --cached --quiet || git commit -m 'refresh RSS feed'
-          git push
-, '', m.group(1)) + ']]></description>', cleaned, flags=re.S)
-          path.write_text(cleaned)
-          PY
+          path = Path("feed.xml")
+          text = path.read_text(encoding="utf-8")
+
+          def sanitize_description(match):
+              body = match.group(1)
+
+              body = re.sub(
+                  r"<h2>\s*(?:\d+\.\s*)?XODUS\s*</h2>.*?(?=<h2\b|$)",
+                  "",
+                  body,
+                  flags=re.IGNORECASE | re.DOTALL,
+              )
+
+              body = re.sub(
+                  r"<h2>\s*\d+\.\s*FREE GAMES\s*</h2>",
+                  "<h2>3. FREE GAMES</h2>",
+                  body,
+                  flags=re.IGNORECASE,
+              )
+
+              body = re.sub(
+                  r"<h2>\s*\d+\.\s*LINUX APPS\s*</h2>",
+                  "<h2>4. LINUX APPS</h2>",
+                  body,
+                  flags=re.IGNORECASE,
+              )
+
+              return "<description><![CDATA[" + body + "]]></description>"
+
+          cleaned = re.sub(
+              r"<description>\s*<!\[CDATA\[(.*?)\]\]>\s*</description>",
+              sanitize_description,
+              text,
+              flags=re.IGNORECASE | re.DOTALL,
+          )
+
+          path.write_text(cleaned, encoding="utf-8")
 
       - name: Refresh feed timestamp
+        shell: python
         run: |
-          python3 - <<'PY'
           from pathlib import Path
           from datetime import datetime, timezone
-          path = Path('feed.xml')
-          text = path.read_text()
-          marker = '<!-- last-checked: '
+
+          path = Path("feed.xml")
+          text = path.read_text(encoding="utf-8")
+          stamp = datetime.now(timezone.utc).isoformat()
+          marker = "<!-- last-checked: "
+
           start = text.find(marker)
           if start != -1:
-              end = text.find('-->', start)
-              text = text[:start] + marker + datetime.now(timezone.utc).isoformat() + ' -->' + text[end+3:]
+              end = text.find("-->", start)
+              if end != -1:
+                  text = text[:start] + marker + stamp + " -->" + text[end + 3:]
           else:
-              text = text.replace('<rss version="2.0">', '<rss version="2.0">\n  <!-- last-checked: ' + datetime.now(timezone.utc).isoformat() + ' -->', 1)
-          path.write_text(text)
-          PY
+              text = text.replace(
+                  '<rss version="2.0">',
+                  '<rss version="2.0">\n  <!-- last-checked: ' + stamp + " -->",
+                  1,
+              )
+
+          path.write_text(text, encoding="utf-8")
 
       - name: Commit feed update
         run: |
