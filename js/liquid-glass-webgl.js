@@ -33,6 +33,12 @@
     uniform float u_time;
     uniform float u_speed;
     uniform vec3 u_colors[5];
+    uniform vec2 u_pointer;
+    uniform vec4 u_shape0;
+    uniform vec4 u_shape1;
+    uniform vec4 u_shape2;
+    uniform vec3 u_radii;
+    uniform vec3 u_enabled;
 
     vec3 permute(vec3 x) {
       return mod(((x * 34.0) + 1.0) * x, 289.0);
@@ -86,51 +92,59 @@
       return 130.0 * dot(m, g);
     }
 
-    void main() {
-      vec2 uv = gl_FragCoord.xy / u_resolution.xy;
-
-      // Same fluid-noise structure as the reference generator.
-      float time = u_time * 0.15 * u_speed;
-
-      float n1 = snoise(
-        uv * 0.5 + vec2(time * 0.1, time * 0.2)
-      );
-      float n2 = snoise(
-        uv * 1.2 - vec2(time * 0.2, time * 0.1)
-      );
-
-      vec2 distUV = uv + vec2(n1, n2) * 0.2;
-
-      float mask1 = snoise(
-        distUV * 0.5 + vec2(time * 0.1, 0.0)
-      ) * 0.5 + 0.5;
-
-      float mask2 = snoise(
-        distUV * 0.6 + vec2(0.0, time * 0.15) + 10.0
-      ) * 0.5 + 0.5;
-
-      float mask3 = snoise(
-        distUV * 0.4 - vec2(time * 0.1, time * 0.1) + 20.0
-      ) * 0.5 + 0.5;
-
-      float mask4 = snoise(
-        distUV * 0.7 + vec2(time * 0.15, -time * 0.1) + 30.0
-      ) * 0.5 + 0.5;
-
-      vec3 color = u_colors[0];
-      color = mix(color, u_colors[1], mask1 * 0.6);
-      color = mix(color, u_colors[2], mask2 * 0.6);
-      color = mix(color, u_colors[3], mask3 * 0.5);
-      color = mix(color, u_colors[4], mask4 * 0.4);
-
-      float grain = fract(
-        sin(dot(uv, vec2(12.9898, 78.233))) * 43758.5453
-      );
-      color += (grain - 0.5) * 0.018;
-
-      gl_FragColor = vec4(clamp(color, 0.0, 1.0), 1.0);
+    float sdRoundBox(vec2 p, vec2 b, float r) {
+      vec2 q = abs(p) - b + r;
+      return min(max(q.x,q.y),0.0) + length(max(q,0.0)) - r;
     }
-  `;
+
+    vec3 glass(vec2 px, vec4 shape, float radius) {
+      vec2 p = px - shape.xy;
+      float d = sdRoundBox(p, shape.zw*0.5, radius);
+      float mask = 1.0 - smoothstep(-1.5,1.5,d);
+      if(mask <= 0.001) return fluidBackground(px);
+      float edge = 1.0 - smoothstep(-34.0,1.0,d);
+      vec2 dir = normalize(p + vec2(0.001));
+      float refraction = 22.0 * edge * edge;
+      vec2 wave = vec2(sin(p.y*0.045 + u_time*0.72),cos(p.x*0.040 - u_time*0.64))*4.0;
+      vec2 samplePx = px - dir*refraction + wave*edge;
+      vec3 frost = vec3(0.0);
+      float count = 0.0;
+      for(int x=-1;x<=1;x++){
+        for(int y=-1;y<=1;y++){
+          frost += fluidBackground(samplePx + vec2(float(x),float(y))*1.5);
+          count += 1.0;
+        }
+      }
+      frost /= count;
+      float ca = 3.2*edge;
+      vec2 caOffset = dir*ca;
+      vec3 refracted = vec3(
+        fluidBackground(samplePx-caOffset).r,
+        fluidBackground(samplePx).g,
+        fluidBackground(samplePx+caOffset).b
+      );
+      refracted = mix(frost,refracted,0.78);
+      refracted = mix(refracted,vec3(1.0,0.985,0.995),0.11);
+      float pointerDist = distance(px,u_pointer);
+      float pointerLight = 1.0-smoothstep(18.0,240.0,pointerDist);
+      refracted += vec3(smoothstep(0.1,1.0,edge)*0.075 + smoothstep(0.78,1.0,edge)*0.07 + pointerLight*0.045);
+      return clamp(refracted,0.0,1.0);
+    }
+
+    vec3 applyGlass(vec3 color, vec2 px, vec4 shape, float radius) {
+      float d = sdRoundBox(px-shape.xy,shape.zw*0.5,radius);
+      float mask = 1.0-smoothstep(-1.5,1.5,d);
+      return mix(color,glass(px,shape,radius),mask);
+    }
+
+    void main() {
+      vec2 px = gl_FragCoord.xy;
+      vec3 color = fluidBackground(px);
+      if(u_enabled.x>0.5) color=applyGlass(color,px,u_shape0,u_radii.x);
+      if(u_enabled.y>0.5) color=applyGlass(color,px,u_shape1,u_radii.y);
+      if(u_enabled.z>0.5) color=applyGlass(color,px,u_shape2,u_radii.z);
+      gl_FragColor=vec4(color,1.0);
+    }  `;
 
   function compile(type, source) {
     const shader = gl.createShader(type);
@@ -200,8 +214,10 @@
     { el: document.querySelector('.progress-dock'), radius: 18 }
   ];
 
-  const COVER_IMAGE =
-    'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Faestheticwallpapers.io%2Fwallpaper%2F317144.jpg&f=1&nofb=1&ipt=fc328366695c1a905c97f130d8d18dc7222414f02b6326cd9ed38d98145199ab&ipo=images';
+  const COVER_SOURCES = [
+    'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Faestheticwallpapers.io%2Fwallpaper%2F317144.jpg&f=1&nofb=1&ipt=fc328366695c1a905c97f130d8d18dc7222414f02b6326cd9ed38d98145199ab&ipo=images',
+    'https://aestheticwallpapers.io/wallpaper/317144.jpg'
+  ];
 
   // Color extraction follows the reference project's cover sampling idea.
   function extractCoverColors(img) {
