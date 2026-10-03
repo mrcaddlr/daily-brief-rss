@@ -25,7 +25,7 @@ import ReflectionBorder from './liquid-glass-reference/reflections.js';
     });
     target.el.prepend(canvas);
 
-    const gl = canvas.getContext('webgl', { alpha: false, antialias: true, depth: false, stencil: false })
+    const gl = canvas.getContext('webgl', { alpha: true, antialias: true, depth: false, stencil: false })
       || canvas.getContext('experimental-webgl');
     if (!gl) return null;
 
@@ -87,7 +87,7 @@ import ReflectionBorder from './liquid-glass-reference/reflections.js';
 
       gl.uniform4fv(u.gridLineColor, [0,0,0,0.15]);
       gl.uniform1f(u.gridSpacing, 25);
-      gl.uniform4fv(u.pageBackgroundColor, [1,0.969,0.984,1]);
+      gl.uniform4fv(u.pageBackgroundColor, [1,0.969,0.984,0]);
       gl.uniform1i(u.showGrid, false);
       gl.uniform1i(u.hasBackgroundImages, false);
       gl.uniform1i(u.backgroundImageCount, 0);
@@ -129,7 +129,7 @@ import ReflectionBorder from './liquid-glass-reference/reflections.js';
       resize();
       gl.useProgram(program);
       setUniforms();
-      gl.clearColor(1,0.969,0.984,1);
+      gl.clearColor(0,0,0,0);
       gl.clear(gl.COLOR_BUFFER_BIT);
       gl.drawArrays(gl.TRIANGLES, 0, 6);
 
