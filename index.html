@@ -86,9 +86,7 @@ button{font:inherit}
 }
 .liquid-glass::before{
  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;border-radius:inherit;
- background:
-   radial-gradient(90% 70% at var(--glass-x,20%) var(--glass-y,0%),rgba(255,255,255,.62),transparent 48%),
-   linear-gradient(120deg,rgba(255,255,255,.20),transparent 38%,rgba(255,143,186,.08));
+ background:transparent;
 }
 .liquid-glass::after{
  content:"";position:absolute;z-index:0;top:-55%;left:-35%;width:28%;height:210%;
@@ -100,7 +98,7 @@ button{font:inherit}
 }
 .liquid-glass>*{position:relative;z-index:1}
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
- .liquid-glass{background:rgba(255,255,255,.9)}
+ .liquid-glass{background:transparent}
 }
 .hero{position:relative;border-radius:28px;padding:32px 34px 30px;box-shadow:var(--shadow);overflow:hidden}
 .hero h1{font-size:clamp(32px,6vw,58px);line-height:1.02;letter-spacing:-.055em;margin:9px 0 10px;max-width:760px;padding-right:80px}
@@ -108,14 +106,14 @@ button{font:inherit}
 .sparkles{position:absolute;right:34px;bottom:26px;color:#ff9bc0;font-size:16px;letter-spacing:5px;pointer-events:none;animation:heroFloat 4s ease-in-out infinite}
 .grid{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;margin-top:18px}
 .console,.panel{
- background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.48);
+ background:transparent;border:1px solid rgba(255,255,255,.48);
  border-radius:22px;box-shadow:var(--shadow);
 }
-.console{overflow:hidden;background:rgba(255,255,255,.14)!important}
+.console{overflow:hidden;background:transparent!important}
 .console-head{
  display:flex;align-items:center;justify-content:space-between;
  padding:14px 18px;border-bottom:1px solid var(--line);
- background:rgba(255,250,253,.16);font-size:11px;font-weight:800;letter-spacing:.08em;color:#9a8490;
+ background:transparent;font-size:11px;font-weight:800;letter-spacing:.08em;color:#9a8490;
 }
 .console-head span:last-child{color:var(--green);letter-spacing:.04em}
 .readout{padding:27px 30px}
