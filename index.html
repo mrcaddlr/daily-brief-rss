@@ -224,7 +224,10 @@ body{background:transparent;background-size:140% 140%,140% 140%,100% 100%;animat
 .click-ripple{position:fixed;z-index:20;width:20px;height:20px;border:1px solid rgba(255,79,145,.36);border-radius:50%;transform:translate(-50%,-50%) scale(.2);pointer-events:none;opacity:.9}.click-ripple.go{animation:rippleOut .62s cubic-bezier(.15,.7,.25,1) forwards}@keyframes rippleOut{to{transform:translate(-50%,-50%) scale(10);opacity:0}}
 #webglCanvas{
  position:fixed;inset:0;width:100vw;height:100vh;display:block;
- z-index:0;pointer-events:none;
+ z-index:0;pointer-events:none;background:transparent!important;
+}
+html,body,.shell,.hero,.console,.progress-dock{
+ background:transparent!important;
 }
 .shell{position:relative;z-index:1}
 .liquid-glass{
@@ -339,7 +342,7 @@ function setupProgress(){
  progressValue.textContent=value+'%';
  progressBar.style.width=value+'%';
 }
-async function loadFeed(){
+async function loadFeed({fresh=false}={}){
  refresh.disabled=true;indicator.textContent='♡ reading';
  try{
   const res=await fetch(fresh?'feed.xml?ts='+Date.now():'feed.xml',{cache:fresh?'no-store':'default'});
@@ -369,6 +372,6 @@ async function loadFeed(){
 refresh.addEventListener('click',()=>loadFeed({fresh:true}));
 setupProgress();glassMotion();pointerMotion();loadFeed();
 </script>
-<script type="module" src="js/liquid-glass-webgl.js"></script>
+<script type="module" src="js/liquid-glass-webgl.js?v=303b4fc"></script>
 </body>
 </html>
