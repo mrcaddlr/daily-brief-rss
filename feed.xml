@@ -4,7 +4,7 @@
   <channel>
     <title>Daily Gaming &amp; Tech Brief</title>
     <link>https://mrcaddlr.github.io/daily-brief-rss/</link>
-    <description>Daily gaming, technology, Steam events, Linux apps, free games, and Xodus development news.</description>
+    <description>Daily gaming, technology, Steam events, Linux apps, and free games.</description>
     <language>en</language>
     <lastBuildDate>Sun, 04 Oct 2026 01:51:00 +0800</lastBuildDate>
     <item>
@@ -43,19 +43,8 @@
 <h3>Steam Autumn Sale — October 1–8, 2026</h3>
 <p><strong>Source: <a href="https://partner.steamgames.com/doc/marketing/upcoming_events/2026_autumn_sale">Steamworks official schedule</a>.</strong> Steam's Autumn Sale is running through October 8 at 10 a.m. Pacific. It is a platform-wide seasonal promotion rather than a themed Fest; participating games set their own discounts, and eligibility generally requires a game to have released at least 30 days before the event.</p>
 <p><strong>Publisher spotlight: 2K Autumn Sale.</strong> 2K announced discounts across its Steam catalogue through October 8, including titles spanning action, sports and strategy. Exact discounts vary by game and region; check the individual Steam store pages for the live price and end time. <strong>Source:</strong> <a href="https://store.steampowered.com/oldnews/?appgroupname=2K+Collection&amp;appids=8850%2C8980%2C57900%2C50130%2C50300%2C67370&amp;feed=steam_community_announcements">2K's Steam announcement</a>.</p>
-<hr/>
-<h2>3. XODUS</h2>
-<p><strong>Estimated progress: 70%</strong></p>
-<p><strong>Daily changes / latest project activity:</strong></p>
-<ul>
-<li>Added <strong>HashTreeStream</strong>, PageStream/PageVerifier work and related tests for MSIXVC hash-tree handling.</li>
-<li>Added handling for malformed and oversized SOAP responses.</li>
-<li>Opened/continued work around the GDK integration, including streaming, downloads, connected storage and Xodus service architecture.</li>
-<li>Recent open work includes the XTaskQueue/runtime initialization hang, networking connectivity stubs affecting Unreal titles, Grounded-related runtime crashes, and Xbox system API edge cases.</li>
-</ul>
-<p><strong>Estimate note:</strong> 70% is an editorial estimate of overall progress toward the project's broader goal of running Xbox PC/Game Pass GDK games on Linux/macOS, not an official Xodus percentage. Current project documentation says login, package downloads and license acquisition are working, while substantial Wine/runtime compatibility work remains. <strong>Sources:</strong> <a href="https://github.com/xodus-gaming/xodus">Xodus GitHub</a>; <a href="https://github.com/xodus-gaming/xgameruntime/issues">xgameruntime issues</a>.</p>
-<hr/>
-<h2>4. FREE GAMES</h2>
+
+<h2>3. FREE GAMES</h2>
 <h3>Epic Games Store — free to keep until October 8</h3>
 <ul>
 <li><strong>System Shock 2: 25th Anniversary Remaster</strong> — claim by October 8, 2026.</li>
@@ -74,7 +63,7 @@
 <p><strong>Amazon Luna streaming:</strong> reported currently streamable titles include Star Wars Outlaws, Avatar: Frontiers of Pandora, Assassin's Creed Mirage, Assassin's Creed Valhalla and Dispatch; streaming access is distinct from claiming a PC copy. <strong>Source:</strong> <a href="https://beebom.com/amazon-prime-gaming-free-games-how-claim/">October Prime Gaming roundup</a>.</p>
 <p><strong>New October Luna claim window:</strong> DOOM (GOG) and Five Nights at Freddy's: Into the Pit were reported added for Prime members with claims open until November 4. <strong>Source:</strong> <a href="https://www.notebookcheck.net/Amazon-adds-two-new-free-games-to-Luna-including-a-survival-horror-adventure.1413750.0.html">Notebookcheck, October 2</a>.</p>
 <hr/>
-<h2>5. LINUX APPS</h2>
+<h2>4. LINUX APPS</h2>
 <h3>1. Shotcut 26.9.27</h3>
 <p>The open-source video editor added adjustment clips, which let filters affect the composite of tracks below, plus automatic audio ducking, timeline performance improvements and a fix for VA-API HEVC hardware encoding on Linux. It is a useful update for editors who want a capable desktop timeline without a subscription. <strong>Source:</strong> <a href="https://www.shotcut.org/">Shotcut official site</a>; <a href="https://www.omgubuntu.co.uk/2026/10/linux-app-release-roundup-september-2026">September Linux app roundup</a>.</p>
 <h3>2. Tributary 0.7.0 alpha</h3>
