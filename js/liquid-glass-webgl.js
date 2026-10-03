@@ -56,18 +56,20 @@ import ReflectionBorder from './liquid-glass-reference/reflections.js';
     { el: document.querySelector('.progress-dock'), radius: 18 }
   ];
 
-  const reflectionCanvas = document.createElement('canvas');
-  reflectionCanvas.id = 'liquidGlassReflectionCanvas';
-  Object.assign(reflectionCanvas.style, {
-    position: 'fixed',
-    inset: '0',
-    width: '100vw',
-    height: '100vh',
-    zIndex: '1',
-    pointerEvents: 'none'
+  const reflectionLayers = targets.map((target, index) => {
+    const canvas = document.createElement('canvas');
+    canvas.id = 'liquidGlassReflectionCanvas-' + index;
+    Object.assign(canvas.style, {
+      position: 'fixed',
+      inset: '0',
+      width: '100vw',
+      height: '100vh',
+      zIndex: '1',
+      pointerEvents: 'none'
+    });
+    document.body.appendChild(canvas);
+    return { canvas, renderer: new ReflectionBorder(canvas), target };
   });
-  document.body.appendChild(reflectionCanvas);
-  const reflectionRenderer = new ReflectionBorder(reflectionCanvas);
 
   const params = {
     edgeDistortionThickness: 29,
@@ -103,12 +105,13 @@ import ReflectionBorder from './liquid-glass-reference/reflections.js';
       gl.viewport(0, 0, width, height);
     }
 
-    if (
-      reflectionCanvas.width !== Math.floor(innerWidth * dpr) ||
-      reflectionCanvas.height !== Math.floor(innerHeight * dpr)
-    ) {
-      reflectionCanvas.width = Math.floor(innerWidth * dpr);
-      reflectionCanvas.height = Math.floor(innerHeight * dpr);
+    for (const layer of reflectionLayers) {
+      const w = Math.floor(innerWidth * dpr);
+      const h = Math.floor(innerHeight * dpr);
+      if (layer.canvas.width !== w || layer.canvas.height !== h) {
+        layer.canvas.width = w;
+        layer.canvas.height = h;
+      }
     }
   }
 
@@ -197,18 +200,11 @@ import ReflectionBorder from './liquid-glass-reference/reflections.js';
   }
 
   function drawReflections() {
-    const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
-    const w = innerWidth * dpr;
-    const h = innerHeight * dpr;
+    for (const layer of reflectionLayers) {
+      if (!layer.target.el) continue;
+      const r = layer.target.el.getBoundingClientRect();
 
-    reflectionRenderer.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    reflectionRenderer.ctx.clearRect(0, 0, innerWidth, innerHeight);
-
-    for (const target of targets) {
-      if (!target.el) continue;
-      const r = target.el.getBoundingClientRect();
-
-      reflectionRenderer.draw({
+      layer.renderer.draw({
         center: {
           x: r.left + r.width / 2,
           y: r.top + r.height / 2
@@ -217,7 +213,7 @@ import ReflectionBorder from './liquid-glass-reference/reflections.js';
           w: r.width,
           h: r.height
         },
-        cornerRadius: target.radius,
+        cornerRadius: layer.target.radius,
         thickness: 2,
         blur: 0,
         offset: 1,
@@ -231,14 +227,24 @@ import ReflectionBorder from './liquid-glass-reference/reflections.js';
   function render() {
     resize();
 
-    gl.clearColor(0, 0, 0, 0);
+    gl.clearColor(background[0], background[1], background[2], 1);
     gl.clear(gl.COLOR_BUFFER_BIT);
     gl.useProgram(program);
     setDefaults();
 
+    gl.enable(gl.SCISSOR_TEST);
     for (const target of targets) {
-      if (target.el) drawGlass(shape(target.el));
+      if (!target.el) continue;
+      const r = target.el.getBoundingClientRect();
+      const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+      const x = Math.max(0, Math.floor(r.left * dpr));
+      const y = Math.max(0, Math.floor((innerHeight - r.bottom) * dpr));
+      const w = Math.max(1, Math.ceil(r.width * dpr));
+      const h = Math.max(1, Math.ceil(r.height * dpr));
+      gl.scissor(x, y, w, h);
+      drawGlass(shape(target.el));
     }
+    gl.disable(gl.SCISSOR_TEST);
 
     drawReflections();
     requestAnimationFrame(render);
