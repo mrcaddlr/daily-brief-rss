@@ -25,7 +25,7 @@
     }
   `;
 
-  const fragment = \`
+  const fragment = `
     precision mediump float;
     varying vec2 v_uv;
 
