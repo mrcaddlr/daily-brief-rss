@@ -1,125 +1,104 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#17131c">
-  <title>Daily Gaming &amp; Tech Brief</title>
-  <style>
-    :root { color-scheme: dark; --bg:#17131c; --panel:#201a27; --line:#403448; --text:#f4eefa; --muted:#cfc3d9; --pink:#f2b9df; --mint:#b7eadb; }
-    * { box-sizing:border-box; }
-    body { margin:0; min-height:100vh; background:radial-gradient(ellipse at 15% 0%,#302138 0,transparent 38rem),var(--bg); color:var(--text); font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
-    a { color:var(--pink); text-underline-offset:3px; } a:hover { color:#fff; }
-    .wrap { width:min(980px,calc(100% - 32px)); margin:0 auto; padding:34px 0 64px; }
-    header { display:flex; align-items:flex-start; justify-content:space-between; gap:18px; margin-bottom:28px; }
-    .mark { display:inline-grid; place-items:center; width:46px; height:46px; border-radius:15px; background:#39263a; color:var(--pink); font-size:27px; }
-    h1 { margin:10px 0 4px; font-size:clamp(30px,6vw,48px); line-height:1.1; letter-spacing:-.04em; }
-    .sub { margin:0; color:var(--muted); }
-    .actions { display:flex; flex-wrap:wrap; gap:9px; margin-top:8px; }
-    .btn { display:inline-flex; align-items:center; justify-content:center; border:1px solid var(--line); border-radius:12px; padding:9px 13px; background:var(--panel); color:var(--text); font:inherit; text-decoration:none; cursor:pointer; }
-    .btn.primary { background:var(--pink); border-color:var(--pink); color:#241723; font-weight:650; }
-    .btn:focus-visible,a:focus-visible { outline:2px solid var(--mint); outline-offset:3px; }
-    .toolbar { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; margin:24px 0 14px; }
-    .eyebrow { margin:0; color:var(--mint); font-size:12px; font-weight:750; letter-spacing:.12em; text-transform:uppercase; }
-    #status { color:var(--muted); font-size:13px; }
-    .brief { overflow:hidden; border:1px solid var(--line); border-radius:20px; background:rgba(32,26,39,.94); box-shadow:0 16px 50px #0002; }
-    .brief-head { padding:22px 24px 18px; border-bottom:1px solid var(--line); background:linear-gradient(110deg,#302238,#201a27 65%); }
-    .brief-head h2 { margin:0 0 5px; font-size:clamp(21px,4vw,29px); line-height:1.25; }
-    .brief-meta { margin:0; color:var(--muted); font-size:13px; }
-    .brief-body { padding:24px; overflow-wrap:anywhere; }
-    .brief-body h2 { margin:1.5em 0 .45em; font-size:1.4rem; line-height:1.3; }
-    .brief-body h2:first-child { margin-top:0; }
-    .brief-body h3 { margin:1.35em 0 .4em; font-size:1.12rem; }
-    .brief-body h4 { margin:1.2em 0 .3em; font-size:1rem; }
-    .brief-body p { margin:.55em 0 1em; color:#e6ddea; }
-    .brief-body ul,.brief-body ol { padding-left:1.5em; }
-    .brief-body li { margin:.4em 0; }
-    .brief-body img { max-width:100%; height:auto; }
-    .empty,.error { padding:24px; border:1px solid var(--line); border-radius:16px; background:var(--panel); color:var(--muted); }
-    footer { margin-top:22px; color:var(--muted); font-size:13px; }
-    @media (max-width:600px) { .wrap{width:calc(100% - 22px);padding-top:22px} header{display:block} .actions{margin-top:18px} .brief-head,.brief-body{padding:18px} }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080b0d">
+<title>Daily Brief // Reactor Console</title>
+<style>
+:root{color-scheme:dark;--bg:#080b0d;--panel:#0d1215;--panel2:#11191d;--line:#263238;--text:#edf4f2;--muted:#91a09f;--green:#a8ffcb;--amber:#ffd98a;--cyan:#9ee7ff;--red:#ff8f8f}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;background:linear-gradient(#080b0d,#0a0f11 55%,#07090b);color:var(--text);font:14px/1.65 ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,transparent 0 3px,#fff00003 4px);opacity:.18}
+a{color:var(--green);text-underline-offset:3px}
+button{font:inherit}
+.shell{width:min(1180px,calc(100% - 28px));margin:auto;padding:22px 0 50px}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:10px 0 18px;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:34px;height:34px;border:1px solid #527062;border-radius:50%;display:grid;place-items:center;color:var(--green);box-shadow:0 0 0 5px #a8ffcb08}
+.brand strong{font-size:14px;letter-spacing:.08em}
+.brand small{display:block;color:var(--muted);margin-top:2px}
+.controls{display:flex;gap:8px;flex-wrap:wrap}
+.btn{border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:8px;padding:8px 11px;cursor:pointer}
+.btn:hover{border-color:#53656b;background:var(--panel2)}
+.btn.primary{border-color:#527062;color:var(--green)}
+.statusbar{display:grid;grid-template-columns:1fr auto;gap:20px;padding:12px 0;color:var(--muted);font-size:12px}
+.statusbar .live{color:var(--green)}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:14px;margin-top:12px}
+.console{border:1px solid var(--line);background:linear-gradient(145deg,#0e1518,#0b1012);border-radius:12px;box-shadow:0 20px 70px #0008;overflow:hidden}
+.console-head{display:flex;justify-content:space-between;gap:12px;padding:12px 15px;border-bottom:1px solid var(--line);background:#0b1012}
+.console-head span:last-child{color:var(--green)}
+.readout{padding:18px}
+.readout h1{font-size:clamp(21px,4vw,32px);line-height:1.2;margin:0 0 6px;letter-spacing:-.03em}
+.readout .meta{color:var(--muted);font-size:12px}
+.brief-body{margin-top:22px}
+.brief-body h2{font-size:15px;color:var(--green);letter-spacing:.05em;margin:28px 0 8px;padding-bottom:6px;border-bottom:1px dashed #304039}
+.brief-body h2:first-child{margin-top:0}
+.brief-body h3{font-size:14px;color:var(--cyan);margin:18px 0 5px}
+.brief-body h4{font-size:13px;color:var(--text);margin:15px 0 3px}
+.brief-body p{color:#d5dfdd;margin:7px 0 12px}
+.brief-body ul{margin:7px 0 14px;padding-left:23px}
+.brief-body li{margin:5px 0}
+.brief-body hr{border:0;border-top:1px solid var(--line);margin:25px 0}
+.brief-body code{color:var(--amber);background:#151719;padding:1px 4px;border-radius:3px}
+.side{display:flex;flex-direction:column;gap:14px}
+.panel{border:1px solid var(--line);background:var(--panel);border-radius:12px;padding:15px}
+.panel h2{font-size:12px;letter-spacing:.12em;color:var(--muted);margin:0 0 13px}
+.meter{height:9px;background:#182125;border:1px solid #26343a;border-radius:99px;overflow:hidden}
+.meter i{display:block;width:70%;height:100%;background:var(--green)}
+.big{font-size:42px;line-height:1;color:var(--green);margin:4px 0 12px}
+.kv{display:grid;grid-template-columns:1fr auto;gap:7px;font-size:12px}
+.kv span:nth-child(odd){color:var(--muted)}
+.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green);margin-right:7px}
+.footer{color:#687775;text-align:center;font-size:11px;padding-top:18px}
+.empty,.error{padding:18px;border:1px solid var(--line);border-radius:10px;color:var(--muted);background:var(--panel)}
+@media(max-width:800px){.grid{grid-template-columns:1fr}.side{display:grid;grid-template-columns:1fr 1fr}.statusbar{grid-template-columns:1fr}.topbar{align-items:flex-start}}
+@media(max-width:520px){.shell{width:calc(100% - 18px)}.side{display:flex}.topbar{display:block}.controls{margin-top:12px}.readout{padding:14px}}
+</style>
 </head>
 <body>
-  <main class="wrap">
-    <header>
-      <div>
-        <div class="mark" aria-hidden="true">✿</div>
-        <h1>Daily Gaming &amp; Tech Brief</h1>
-        <p class="sub">gaming, tech, Steam, free games, Linux apps, and Xodus updates.</p>
-      </div>
-      <nav class="actions" aria-label="Feed actions">
-        <a class="btn primary" href="feed.xml">RSS feed ↗</a>
-        <button class="btn" id="refresh" type="button">Refresh</button>
-      </nav>
-    </header>
-    <section aria-labelledby="latest-label">
-      <div class="toolbar">
-        <p class="eyebrow" id="latest-label">Latest brief</p>
-        <span id="status" role="status">Loading feed…</span>
-      </div>
-      <div id="reader" aria-live="polite"><div class="empty">Loading the latest brief…</div></div>
-    </section>
-    <footer>Powered by the <a href="feed.xml">RSS 2.0 feed</a>. New briefs appear here automatically when published.</footer>
-  </main>
-  <script>
-    const reader = document.getElementById('reader');
-    const status = document.getElementById('status');
-    const refresh = document.getElementById('refresh');
-    function readableDate(value) {
-      const date = new Date(value);
-      return Number.isNaN(date.getTime()) ? value : new Intl.DateTimeFormat(undefined, { dateStyle: 'full' }).format(date);
-    }
-    async function loadFeed() {
-      refresh.disabled = true;
-      status.textContent = 'Updating…';
-      try {
-        const response = await fetch('feed.xml?ts=' + Date.now(), { cache: 'no-store' });
-        if (!response.ok) throw new Error('Feed request failed (' + response.status + ')');
-        const doc = new DOMParser().parseFromString(await response.text(), 'application/xml');
-        if (doc.querySelector('parsererror')) throw new Error('The RSS feed could not be parsed.');
-        const items = Array.from(doc.querySelectorAll('channel > item'));
-        if (!items.length) {
-          reader.innerHTML = '<div class="empty">No briefs have been published yet.</div>';
-          status.textContent = '0 briefs';
-          return;
-        }
-        reader.replaceChildren();
-        items.forEach((item, index) => {
-          const title = item.querySelector('title')?.textContent?.trim() || 'Daily brief';
-          const pubDate = item.querySelector('pubDate')?.textContent?.trim() || '';
-          const description = item.querySelector('description')?.textContent || '';
-          const article = document.createElement('article');
-          article.className = 'brief';
-          const head = document.createElement('div');
-          head.className = 'brief-head';
-          const heading = document.createElement('h2');
-          heading.textContent = title;
-          const meta = document.createElement('p');
-          meta.className = 'brief-meta';
-          meta.textContent = pubDate ? readableDate(pubDate) : 'Publication date unavailable';
-          head.append(heading, meta);
-          const body = document.createElement('div');
-          body.className = 'brief-body';
-          body.innerHTML = description;
-          article.append(head, body);
-          reader.append(article);
-          if (index < items.length - 1) {
-            const spacer = document.createElement('div');
-            spacer.style.height = '18px';
-            reader.append(spacer);
-          }
-        });
-        status.textContent = items.length + (items.length === 1 ? ' brief' : ' briefs');
-      } catch (error) {
-        reader.innerHTML = '<div class="error">Could not load the RSS feed. Try refreshing, or open the <a href="feed.xml">raw feed</a> directly.</div>';
-        status.textContent = 'Feed unavailable';
-      } finally {
-        refresh.disabled = false;
-      }
-    }
-    refresh.addEventListener('click', loadFeed);
-    loadFeed();
-  </script>
+<main class="shell">
+<header class="topbar">
+<div class="brand"><div class="logo" aria-hidden="true">◎</div><div><strong>DAILY BRIEF // CONTROL</strong><small>gaming · technology · systems intelligence</small></div></div>
+<nav class="controls" aria-label="Feed controls"><a class="btn primary" href="feed.xml">OPEN RSS</a><button class="btn" id="refresh">REFRESH</button></nav>
+</header>
+<div class="statusbar"><span><span class="live">● ONLINE</span> &nbsp;/&nbsp; RSS CHANNEL NOMINAL</span><span id="status">INITIALIZING READER…</span></div>
+<div class="grid">
+<section class="console" aria-label="Daily brief reader">
+<div class="console-head"><span>PRIMARY DISPLAY / DAILY REPORT</span><span id="indicator">STANDBY</span></div>
+<div id="reader"><div class="empty">Loading current report…</div></div>
+</section>
+<aside class="side">
+<div class="panel"><h2>PROJECT MONITOR</h2><div class="big">70%</div><div class="meter"><i></i></div><p style="color:var(--muted);font-size:11px">XODUS / ESTIMATED OVERALL PROGRESS</p></div>
+<div class="panel"><h2>SYSTEM</h2><div class="kv"><span>FEED</span><span>RSS 2.0</span><span>MODE</span><span>LIVE READ</span><span>ARCHIVE</span><span>FORWARD ONLY</span><span>CONTENT</span><span>NO PIRACY</span></div></div>
+<div class="panel"><h2>CHANNELS</h2><p style="margin:0;color:#d5dfdd;font-size:12px"><span class="dot"></span>GAME NEWS</p><p style="margin:7px 0;color:#d5dfdd;font-size:12px"><span class="dot"></span>TECH NEWS</p><p style="margin:7px 0;color:#d5dfdd;font-size:12px"><span class="dot"></span>STEAM / EVENTS</p><p style="margin:7px 0;color:#d5dfdd;font-size:12px"><span class="dot"></span>FREE GAMES</p><p style="margin:7px 0 0;color:#d5dfdd;font-size:12px"><span class="dot"></span>LINUX APPS</p></div>
+</aside>
+</div>
+<footer class="footer">DAILY BRIEF CONTROL CONSOLE · <a href="feed.xml">RAW RSS</a> · NEW REPORTS APPEAR AS PUBLISHED</footer>
+</main>
+<script>
+const reader=document.getElementById('reader'),status=document.getElementById('status'),indicator=document.getElementById('indicator'),refresh=document.getElementById('refresh');
+const dateFmt=new Intl.DateTimeFormat(undefined,{dateStyle:'full'});
+async function loadFeed(){
+refresh.disabled=true;indicator.textContent='READING';status.textContent='FETCHING FEED…';
+try{
+const res=await fetch('feed.xml?ts='+Date.now(),{cache:'no-store'});if(!res.ok)throw new Error();
+const doc=new DOMParser().parseFromString(await res.text(),'application/xml');if(doc.querySelector('parsererror'))throw new Error();
+const items=[...doc.querySelectorAll('channel > item')];reader.replaceChildren();
+if(!items.length){reader.innerHTML='<div class="empty">NO CURRENT REPORT.</div>';return}
+items.forEach((item,index)=>{
+const article=document.createElement('article');article.className='readout';
+const h=document.createElement('h1');h.textContent=item.querySelector('title')?.textContent?.trim()||'DAILY BRIEF';
+const meta=document.createElement('div');meta.className='meta';const d=item.querySelector('pubDate')?.textContent?.trim()||'';meta.textContent=d?(dateFmt.format(new Date(d))+' / '+d):'DATE UNAVAILABLE';
+const body=document.createElement('div');body.className='brief-body';body.innerHTML=item.querySelector('description')?.textContent||'';
+article.append(h,meta,body);reader.append(article);
+});
+status.textContent=items.length+' REPORT'+(items.length===1?'':'S')+' LOADED';indicator.textContent='NOMINAL';
+}catch(e){reader.innerHTML='<div class="error">FEED READ ERROR. <a href="feed.xml">OPEN RAW RSS</a>.</div>';status.textContent='FEED ERROR';indicator.textContent='FAULT'}
+finally{refresh.disabled=false}
+}
+refresh.addEventListener('click',loadFeed);loadFeed();
+</script>
 </body>
 </html>
