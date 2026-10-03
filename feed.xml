@@ -4,9 +4,85 @@
   <channel>
     <title>Daily Gaming &amp; Tech Brief</title>
     <link>https://mrcaddlr.github.io/daily-brief-rss/</link>
-    <description>Daily gaming, tech, Steam, Linux, free games, Xodus, and PC DRM news.</description>
+    <description>Daily gaming, technology, Steam events, Linux apps, free games, and Xodus development news.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 20 Sep 2026 18:54:24 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 04 Oct 2026 01:51:00 +0800</lastBuildDate>
+    <item>
+      <title>Daily Gaming &amp; Tech Brief — October 4, 2026</title>
+      <link>https://mrcaddlr.github.io/daily-brief-rss/</link>
+      <guid isPermaLink="false">daily-brief-2026-10-04</guid>
+      <pubDate>Sun, 04 Oct 2026 01:51:00 +0800</pubDate>
+      <description><![CDATA[
+<h2>1. GAME &amp; TECH NEWS</h2>
+<h3>GAME NEWS</h3>
+<h4>1. Golden Joystick Awards 2026 voting is open</h4>
+<p><strong>October 2026 — Source: <a href="https://www.techradar.com/gaming/featuring-a-host-of-our-favorite-games-from-this-year-and-2-of-our-favorite-gaming-devices-you-can-now-place-your-votes-for-the-best-in-gaming-at-the-golden-joystick-awards-2026">TechRadar</a>.</strong> The 44th Golden Joystick Awards has opened public voting across 21 categories, with nominees including Resident Evil Requiem, Big Walk, 007 First Light, Dispatch and Mina the Hollower. Voting is scheduled to close October 23, with the awards ceremony on November 11 and the Ultimate Game of the Year shortlist due October 26.</p>
+<h4>2. October's PC release calendar is filling up</h4>
+<p><strong>October 3, 2026 — Source: <a href="https://www.pcgamer.com/games/pc-game-release-dates-october-2026/">PC Gamer</a>.</strong> October's upcoming slate includes Dynasty Warriors 3 Remastered, Ace Combat 8, Hellraiser: Revival, Star Wars: Galactic Racer and Final Fantasy Resonance, alongside updates and milestones such as Enshrouded's planned 1.0 launch. Release dates and platform availability can differ by title, so individual store listings remain the final check before planning a purchase.</p>
+<h4>3. Steam reportedly generated 
+    <item>.7 billion in September</h4>
+<p><strong>October 3, 2026 — Source: <a href="https://www.tomshardware.com/video-games/pc-gaming">Tom's Hardware</a>.</strong> Reporting based on Steam market estimates puts September revenue at roughly 
+    <item>.7 billion despite rising PC hardware costs. The same report says Steam is approaching 21,000 new releases during 2026, illustrating the scale of the PC storefront and the competition developers face for visibility.</p>
+<h4>4. Used gaming CPUs can carry existing anti-cheat bans</h4>
+<p><strong>October 3, 2026 — Source: <a href="https://www.tomshardware.com/uk">Tom's Hardware</a>.</strong> A report highlighted that some anti-cheat systems can associate bans with hardware identifiers, meaning a second-hand CPU or system component may have a history the buyer cannot easily check before purchase. Policies vary by game and anti-cheat provider, so this is a reminder to review the specific game's support and appeal rules rather than assume every ban follows the same process.</p>
+<h4>5. World of Warcraft: Forever console listings remain unconfirmed</h4>
+<p><strong>October 2, 2026 — Source: <a href="https://www.windowscentral.com/gaming/blizzard/world-of-warcraft-xbox-brazilian-classification-rumor">Windows Central</a>.</strong> A Brazilian classification listing briefly suggested that World of Warcraft: Forever might be headed to consoles, but the listing was reportedly removed and may have been an error. Blizzard's announced platforms remain PC and Mac; the game is reported for November 4, 2026, and console versions should be treated as an unconfirmed rumor.</p>
+<h3>TECH NEWS</h3>
+<h4>1. Asus router configuration files raise a security concern</h4>
+<p><strong>October 3, 2026 — Source: <a href="https://www.tomshardware.com/news/archive">Tom's Hardware</a>.</strong> Researchers reported that malicious VPN configuration files could let an attacker run commands on affected Asus routers, while a related patch also addresses a path that could let an authenticated attacker enable Telnet with root access. Router owners should apply the vendor's relevant firmware update and avoid importing configuration files from untrusted sources.</p>
+<h4>2. Google pauses its open-source bug bounty program until 2027</h4>
+<p><strong>October 3, 2026 — Source: <a href="https://www.tomshardware.com/news/archive">Tom's Hardware</a>.</strong> Google has reportedly frozen new submissions to its open-source bug bounty program amid a surge of low-quality and invalid reports attributed to AI-generated submissions. The pause affects the program's intake rather than meaning that open-source security work has stopped; maintainers still need actionable, reproducible reports and clear vulnerability details.</p>
+<h4>3. Toshiba plans a major increase in hard-drive capacity</h4>
+<p><strong>October 2, 2026 — Source: <a href="https://www.tomshardware.com/news/archive">Tom's Hardware</a>.</strong> Toshiba reportedly plans to double HDD production capacity as demand and supply constraints affect the storage market. The company has also discussed 65TB and 100TB drive roadmaps for 2030 and beyond, a development relevant to data centres and archival storage even as consumer PCs increasingly use SSDs.</p>
+<h4>4. Raspberry Pi prices rise again amid memory pressure</h4>
+<p><strong>October 3, 2026 — Source: <a href="https://www.tomshardware.com/news/archive">Tom's Hardware</a>.</strong> Reporting says some Raspberry Pi products are seeing price increases of up to 23% as LPDDR4 and LPDDR5 memory costs rise. This is described as the third increase of the year, adding pressure to hobbyist projects, home servers and low-cost embedded builds.</p>
+<h4>5. Micron expects memory supply pressure to persist through 2028</h4>
+<p><strong>October 1–3, 2026 — Source: <a href="https://www.tomshardware.com/archive">Tom's Hardware</a>.</strong> Micron has forecast tighter memory supply through 2028 while reporting unusually strong margins and profits. Higher demand from data centres and AI infrastructure can compete with consumer products for manufacturing capacity, potentially keeping RAM upgrades and some device prices elevated.</p>
+<hr/>
+<h2>2. STEAM SALE / EVENT</h2>
+<h3>Steam Autumn Sale — October 1–8, 2026</h3>
+<p><strong>Source: <a href="https://partner.steamgames.com/doc/marketing/upcoming_events/2026_autumn_sale">Steamworks official schedule</a>.</strong> Steam's Autumn Sale is running through October 8 at 10 a.m. Pacific. It is a platform-wide seasonal promotion rather than a themed Fest; participating games set their own discounts, and eligibility generally requires a game to have released at least 30 days before the event.</p>
+<p><strong>Publisher spotlight: 2K Autumn Sale.</strong> 2K announced discounts across its Steam catalogue through October 8, including titles spanning action, sports and strategy. Exact discounts vary by game and region; check the individual Steam store pages for the live price and end time. <strong>Source:</strong> <a href="https://store.steampowered.com/oldnews/?appgroupname=2K+Collection&amp;appids=8850%2C8980%2C57900%2C50130%2C50300%2C67370&amp;feed=steam_community_announcements">2K's Steam announcement</a>.</p>
+<hr/>
+<h2>3. XODUS</h2>
+<p><strong>Progress: active development toward game execution</strong></p>
+<ul>
+<li><strong>Core project:</strong> Xodus describes itself as an open-source effort to bring Xbox PC and Game Pass games to Linux and macOS; its core repository covers authentication, token exchange, package downloads and license acquisition. <strong>Source:</strong> <a href="https://github.com/xodus-gaming/xodus">Xodus GitHub</a>.</li>
+<li><strong>Runtime implementation:</strong> The companion <code>xgameruntime</code> project is implementing Microsoft's Xbox PC runtime APIs needed by GDK-based games running through Wine. <strong>Source:</strong> <a href="https://github.com/xodus-gaming/xgameruntime">xgameruntime repository</a>.</li>
+<li><strong>Concrete compatibility gaps:</strong> Open issues include missing networking behavior that can cause Unreal-based GDK titles to fail during initialization, a task-queue hang, and API edge cases that can crash games such as Grounded. <strong>Source:</strong> <a href="https://github.com/xodus-gaming/xgameruntime/issues">xgameruntime issue tracker</a>.</li>
+<li><strong>Wine/Proton integration:</strong> The project maintains patched Wine and Proton components so the runtime can be integrated with the compatibility environment rather than relying on a standalone Windows installation. Broad compatibility is not yet established. <strong>Source:</strong> <a href="https://github.com/xodus-gaming">Xodus project organization</a>.</li>
+</ul>
+<hr/>
+<h2>4. FREE GAMES</h2>
+<h3>Epic Games Store — free to keep until October 8</h3>
+<ul>
+<li><strong>System Shock 2: 25th Anniversary Remaster</strong> — claim by October 8, 2026.</li>
+<li><strong>BURIED STARS</strong> — claim by October 8, 2026.</li>
+</ul>
+<p>These are limited-time free-to-keep offers, not free-to-play titles or weekend trials. <strong>Sources:</strong> <a href="https://store.epicgames.com/FREE-GAMES">Epic Games Store free-games page</a>; <a href="https://epicfree.games/epic-free-games-history">free-game history and dates</a>.</p>
+<h3>Amazon Prime Gaming / Luna — claimable PC games</h3>
+<p><strong>October 2026 lineup:</strong> Amazon's full October monthly list was not yet announced in the reporting available October 1, but several September drops remain claimable into October. These are Prime benefits and require an eligible active subscription.</p>
+<ul>
+<li><strong>Just Die Already</strong> — Epic Games Store — claim by October 7, 2026.</li>
+<li><strong>War Hospital</strong> — Epic Games Store — claim by October 7, 2026.</li>
+<li><strong>Drop Duchy</strong>, <strong>DOOM + DOOM II</strong>, <strong>Botany Manor</strong> — claim by October 14, 2026 (stores vary by title).</li>
+<li><strong>DOOM Eternal</strong>, <strong>RiMS Racing</strong>, <strong>Wall World 2</strong> — claim by October 21, 2026 (Microsoft Store, Epic Games Store and Amazon Games App respectively).</li>
+<li><strong>Havendock</strong>, <strong>Weakless</strong>, <strong>Zoria: Age of Shattering</strong>, <strong>Hue</strong>, <strong>High on Life</strong> and <strong>The Da Vinci Cryptex</strong> — claim windows reported through October 28, 2026, across Amazon Games App, GOG, Epic and Legacy Games depending on title.</li>
+</ul>
+<p><strong>Amazon Luna streaming:</strong> reported currently streamable titles include Star Wars Outlaws, Avatar: Frontiers of Pandora, Assassin's Creed Mirage, Assassin's Creed Valhalla and Dispatch; streaming access is distinct from claiming a PC copy. <strong>Source:</strong> <a href="https://beebom.com/amazon-prime-gaming-free-games-how-claim/">October Prime Gaming roundup</a>.</p>
+<p><strong>New October Luna claim window:</strong> DOOM (GOG) and Five Nights at Freddy's: Into the Pit were reported added for Prime members with claims open until November 4. <strong>Source:</strong> <a href="https://www.notebookcheck.net/Amazon-adds-two-new-free-games-to-Luna-including-a-survival-horror-adventure.1413750.0.html">Notebookcheck, October 2</a>.</p>
+<hr/>
+<h2>5. LINUX APPS</h2>
+<h3>1. Fooyin</h3>
+<p>A highly customizable desktop music player with a queue-focused interface, Last.fm support and global shortcuts. Recent work includes improved queue controls and the ability to open and play audio CDs, read CD-Text, fetch metadata and rip tracks to MP3 or Opus with AccurateRip checks. <strong>Source:</strong> <a href="https://www.omgubuntu.co.uk/2026/10/linux-app-release-roundup-september-2026">OMG! Ubuntu's September app roundup</a>.</p>
+<h3>2. Laser</h3>
+<p>A GTK4/libadwaita audio-CD ripping application aimed at making physical music collections easier to archive. It is a focused, modern option for users who want a graphical workflow for reading CDs and managing their digital copies. <strong>Source:</strong> <a href="https://github.com/laser-audio/laser">Laser project</a>.</p>
+<h3>3. Tauno Serial Plotter</h3>
+<p>A compact tool for visualizing data arriving over a serial connection in real time, useful for microcontrollers, sensors and electronics experiments. Live plots make changing readings easier to understand than a terminal full of raw numbers. <strong>Source:</strong> <a href="https://github.com/taunoe/tauno-serial-plotter">Tauno Serial Plotter project</a>.</p>
+
+]]></description>
+    </item>
+
     <item>
       <title>Daily Gaming &amp; Tech Brief — September 17, 2026</title>
       <link>https://mrcaddlr.github.io/daily-brief-rss/</link>
