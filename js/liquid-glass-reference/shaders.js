@@ -460,10 +460,7 @@ export const fragmentShaderSource = `
                 }
             }
 
-            // Keep the simulated background color for the glass tint/refraction,
-            // but do not bake an opaque page-colored rectangle into the canvas.
             finalColor = mix(refractedBackground, u_glassBaseColor, u_glassBaseColor.a);
-            finalColor.a = max(refractedBackground.a, u_glassBaseColor.a);
 
             // Add subtle edge glow for main liquid glass
             if (isInDistortingEdge) {
