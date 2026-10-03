@@ -377,7 +377,7 @@ async function loadFeed(){
   indicator.textContent='♡ oops';
  }finally{refresh.disabled=false}
 }
-refresh.addEventListener('click',loadFeed);
+refresh.addEventListener('click',()=>loadFeed({fresh:true}));
 setupProgress();glassMotion();pointerMotion();loadFeed();
 </script>
 <script type="module" src="js/liquid-glass-webgl.js"></script>
