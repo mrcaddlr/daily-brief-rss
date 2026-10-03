@@ -54,7 +54,7 @@ button{font:inherit}
 .hero{position:relative;background:rgba(255,255,255,.86);border:1px solid var(--line);border-radius:28px;padding:32px 34px 30px;box-shadow:var(--shadow);overflow:hidden}
 .hero h1{font-size:clamp(32px,6vw,58px);line-height:1.02;letter-spacing:-.055em;margin:9px 0 10px;max-width:760px;padding-right:80px}
 .hero p{color:var(--muted);margin:0;max-width:670px;font-size:15px;padding-right:80px}
-.sparkles{position:absolute;right:34px;bottom:26px;color:#ff9bc0;font-size:16px;letter-spacing:5px;pointer-events:none}
+.sparkles{position:absolute;right:34px;bottom:26px;color:#ff9bc0;font-size:16px;letter-spacing:5px;pointer-events:none;animation:heroFloat 4s ease-in-out infinite}
 .grid{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;margin-top:18px}
 .console,.panel{
  background:rgba(255,255,255,.86);border:1px solid var(--line);
@@ -108,6 +108,24 @@ button{font:inherit}
 @keyframes glassSweep{0%,35%{transform:translateX(-55%) rotate(3deg)}75%,100%{transform:translateX(55%) rotate(3deg)}}
 @keyframes storySheen{from{transform:translateX(-110%)}to{transform:translateX(120%)}}
 @keyframes progressIn{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes pageDrift{0%,100%{background-position:0 0,100% 0,0 0}50%{background-position:4% 2%,96% 4%,0 0}}
+@keyframes heroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@keyframes logoBounce{0%,100%{transform:rotate(0) scale(1)}50%{transform:rotate(-3deg) scale(1.035)}}
+@keyframes sheen{0%{transform:translateX(-140%) rotate(8deg);opacity:0}15%{opacity:.5}45%,100%{transform:translateX(140%) rotate(8deg);opacity:0}}
+@keyframes storyIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+body{background-size:140% 140%,140% 140%,100% 100%;animation:pageDrift 18s ease-in-out infinite}
+.hero{isolation:isolate}
+.hero::before{content:"";position:absolute;inset:-35%;z-index:-1;background:radial-gradient(circle at var(--hero-x,50%) var(--hero-y,35%),rgba(255,143,186,.22),transparent 28%);pointer-events:none;transition:background-position .25s ease}
+.hero::after{content:"";position:absolute;top:-30%;bottom:-30%;left:-35%;width:22%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.6),transparent);transform:translateX(-140%) rotate(8deg);pointer-events:none;animation:sheen 8s ease-in-out 1.5s infinite}
+.mark{animation:logoBounce 4s ease-in-out 1.2s infinite}
+.readout{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s cubic-bezier(.22,.8,.2,1)}
+.readout.is-visible{opacity:1;transform:none}
+.readout::after{content:"";display:block;height:2px;margin-top:25px;border-radius:99px;background:linear-gradient(90deg,transparent,#ff8fba,transparent);transform:scaleX(0);transform-origin:center;transition:transform .7s ease .2s;opacity:.35}
+.readout.is-visible::after{transform:scaleX(1)}
+@media (hover:hover){
+ .mark:hover{animation:none;transform:rotate(-5deg) scale(1.06)}
+ .readout:hover{transform:translateY(-2px)}
+}
 @media (prefers-reduced-motion:reduce){
  *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
